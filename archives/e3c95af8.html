@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Lao_Liu Blog">
 <meta property="og:description" content="Lao_Liu的BGP初体验。">
 <meta property="og:locale" content="zh-hans">
-<meta property="og:updated_time" content="2020-02-20T05:45:26.824Z">
+<meta property="og:updated_time" content="2020-03-01T07:05:09.216Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BGP初体验-Linux,Openwrt与Quagga">
 <meta name="twitter:description" content="Lao_Liu的BGP初体验。">
@@ -188,7 +188,7 @@
 <h2 id="网络环境"><a href="#网络环境" class="headerlink" title="网络环境"></a>网络环境</h2><p>本来想做三台设备两个AS间的通讯，有一台设备无法安装任何BGP软件也就作罢；也没有画拓扑图的必要了（悲）。</p>
 <p>AS114514 Debian 10.0.1.1，命名为R1，享有10.0.1.0/24网段；</p>
 <p>AS1919810 Openwrt 10.0.2.1，命名为R2，享有10.0.2.0/24网段。</p>
-<h2 id="Qugga配置"><a href="#Qugga配置" class="headerlink" title="Qugga配置"></a>Qugga配置</h2><p>下面才是重头戏。Quagga的配置文件位于<code>/etc/quagga/</code></p>
+<h2 id="Quagga配置"><a href="#Quagga配置" class="headerlink" title="Quagga配置"></a>Quagga配置</h2><p>下面才是重头戏。Quagga的配置文件位于<code>/etc/quagga/</code></p>
 <p>据测试，Openwrt安装quagga后会带有初始配置，而Debian不带初始配置，可自行创建。</p>
 <p><code>/etc/quagga/zebra.conf</code>配置（可不用修改）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">! 登陆密码</span><br><span class="line">password zebra</span><br><span class="line">!</span><br><span class="line">access-list vty permit 127.0.0.0/8</span><br><span class="line">access-list vty deny any</span><br><span class="line">!</span><br><span class="line">line vty</span><br><span class="line"> access-class vty</span><br></pre></td></tr></table></figure>
@@ -309,7 +309,7 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境配置"><span class="toc-number">1.</span> <span class="toc-text">环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作环境"><span class="toc-number">1.1.</span> <span class="toc-text">操作环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络配置"><span class="toc-number">1.2.</span> <span class="toc-text">网络配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络环境"><span class="toc-number">2.</span> <span class="toc-text">网络环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Qugga配置"><span class="toc-number">3.</span> <span class="toc-text">Qugga配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#欣赏结果"><span class="toc-number">4.</span> <span class="toc-text">欣赏结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有什么用处呢？"><span class="toc-number">5.</span> <span class="toc-text">有什么用处呢？</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境配置"><span class="toc-number">1.</span> <span class="toc-text">环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#操作环境"><span class="toc-number">1.1.</span> <span class="toc-text">操作环境</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#网络配置"><span class="toc-number">1.2.</span> <span class="toc-text">网络配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#网络环境"><span class="toc-number">2.</span> <span class="toc-text">网络环境</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Quagga配置"><span class="toc-number">3.</span> <span class="toc-text">Quagga配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#欣赏结果"><span class="toc-number">4.</span> <span class="toc-text">欣赏结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#有什么用处呢？"><span class="toc-number">5.</span> <span class="toc-text">有什么用处呢？</span></a></li></ol>
                     </div>
                 </span>
             </div>
