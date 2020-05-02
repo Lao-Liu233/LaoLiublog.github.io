@@ -5,9 +5,9 @@
   <subtitle>A place to say something.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://blog.laoliu.icu/"/>
+  <link href="https://blog.laoliu.eu.org/"/>
   <updated>2020-04-08T14:00:23.959Z</updated>
-  <id>https://blog.laoliu.icu/</id>
+  <id>https://blog.laoliu.eu.org/</id>
   
   <author>
     <name>Lao_Liu</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>BGP初体验-Linux,Openwrt与Quagga</title>
-    <link href="https://blog.laoliu.icu/archives/e3c95af8.html"/>
-    <id>https://blog.laoliu.icu/archives/e3c95af8.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/e3c95af8.html"/>
+    <id>https://blog.laoliu.eu.org/archives/e3c95af8.html</id>
     <published>2020-02-10T04:30:00.000Z</published>
     <updated>2020-04-08T14:00:23.959Z</updated>
     
@@ -30,14 +30,14 @@
     </summary>
     
     
-      <category term="教程" scheme="https://blog.laoliu.icu/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Joplin+Webdav同步问题的解决方案</title>
-    <link href="https://blog.laoliu.icu/archives/9d1c6fa4.html"/>
-    <id>https://blog.laoliu.icu/archives/9d1c6fa4.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/9d1c6fa4.html"/>
+    <id>https://blog.laoliu.eu.org/archives/9d1c6fa4.html</id>
     <published>2020-01-06T10:00:00.000Z</published>
     <updated>2020-01-06T12:23:17.723Z</updated>
     
@@ -48,14 +48,14 @@
     </summary>
     
     
-      <category term="教程" scheme="https://blog.laoliu.icu/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>莱卡依然想要回家</title>
-    <link href="https://blog.laoliu.icu/archives/c7a0a8db.html"/>
-    <id>https://blog.laoliu.icu/archives/c7a0a8db.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/c7a0a8db.html"/>
+    <id>https://blog.laoliu.eu.org/archives/c7a0a8db.html</id>
     <published>2019-10-31T15:00:00.000Z</published>
     <updated>2020-02-21T06:43:42.338Z</updated>
     
@@ -66,14 +66,14 @@
     </summary>
     
     
-      <category term="随笔" scheme="https://blog.laoliu.icu/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>GOROGOA-精华，你的成果如何</title>
-    <link href="https://blog.laoliu.icu/archives/ff412ce9.html"/>
-    <id>https://blog.laoliu.icu/archives/ff412ce9.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/ff412ce9.html"/>
+    <id>https://blog.laoliu.eu.org/archives/ff412ce9.html</id>
     <published>2019-10-25T14:30:00.000Z</published>
     <updated>2020-02-16T05:28:53.939Z</updated>
     
@@ -84,14 +84,14 @@
     </summary>
     
     
-      <category term="随笔" scheme="https://blog.laoliu.icu/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>声明</title>
-    <link href="https://blog.laoliu.icu/archives/c3498269.html"/>
-    <id>https://blog.laoliu.icu/archives/c3498269.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/c3498269.html"/>
+    <id>https://blog.laoliu.eu.org/archives/c3498269.html</id>
     <published>2019-10-24T14:30:00.000Z</published>
     <updated>2019-10-24T14:19:38.552Z</updated>
     
@@ -102,14 +102,14 @@
     </summary>
     
     
-      <category term="随笔" scheme="https://blog.laoliu.icu/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>iPv6下绝佳的DDNS方法-dynv6</title>
-    <link href="https://blog.laoliu.icu/archives/27f2d840.html"/>
-    <id>https://blog.laoliu.icu/archives/27f2d840.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/27f2d840.html"/>
+    <id>https://blog.laoliu.eu.org/archives/27f2d840.html</id>
     <published>2019-10-03T15:30:00.000Z</published>
     <updated>2019-10-03T15:45:07.311Z</updated>
     
@@ -120,14 +120,14 @@
     </summary>
     
     
-      <category term="教程" scheme="https://blog.laoliu.icu/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>搭建Calibre-Web电子书网页端管理服务</title>
-    <link href="https://blog.laoliu.icu/archives/a4c81e8f.html"/>
-    <id>https://blog.laoliu.icu/archives/a4c81e8f.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/a4c81e8f.html"/>
+    <id>https://blog.laoliu.eu.org/archives/a4c81e8f.html</id>
     <published>2019-10-02T10:30:00.000Z</published>
     <updated>2020-03-06T06:53:20.583Z</updated>
     
@@ -138,14 +138,14 @@
     </summary>
     
     
-      <category term="教程" scheme="https://blog.laoliu.icu/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>秒知APP消息发送教程</title>
-    <link href="https://blog.laoliu.icu/archives/8ca2a7b3.html"/>
-    <id>https://blog.laoliu.icu/archives/8ca2a7b3.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/8ca2a7b3.html"/>
+    <id>https://blog.laoliu.eu.org/archives/8ca2a7b3.html</id>
     <published>2019-09-22T00:00:00.000Z</published>
     <updated>2020-02-16T05:30:41.460Z</updated>
     
@@ -156,14 +156,14 @@
     </summary>
     
     
-      <category term="随笔" scheme="https://blog.laoliu.icu/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>对于“智慧校园”与人脸识别的一些看法</title>
-    <link href="https://blog.laoliu.icu/archives/330720fc.html"/>
-    <id>https://blog.laoliu.icu/archives/330720fc.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/330720fc.html"/>
+    <id>https://blog.laoliu.eu.org/archives/330720fc.html</id>
     <published>2019-09-14T10:00:00.000Z</published>
     <updated>2019-09-14T10:15:14.406Z</updated>
     
@@ -174,14 +174,14 @@
     </summary>
     
     
-      <category term="随笔" scheme="https://blog.laoliu.icu/tags/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>群晖-外网访问一站式教程2 DDNS</title>
-    <link href="https://blog.laoliu.icu/archives/87bacf3f.html"/>
-    <id>https://blog.laoliu.icu/archives/87bacf3f.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/87bacf3f.html"/>
+    <id>https://blog.laoliu.eu.org/archives/87bacf3f.html</id>
     <published>2019-08-31T10:30:00.000Z</published>
     <updated>2019-08-31T10:56:59.301Z</updated>
     
@@ -192,14 +192,14 @@
     </summary>
     
     
-      <category term="教程" scheme="https://blog.laoliu.icu/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>群晖-外网访问一站式教程1 Zerotier</title>
-    <link href="https://blog.laoliu.icu/archives/8776c6d2.html"/>
-    <id>https://blog.laoliu.icu/archives/8776c6d2.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/8776c6d2.html"/>
+    <id>https://blog.laoliu.eu.org/archives/8776c6d2.html</id>
     <published>2019-08-20T04:00:00.000Z</published>
     <updated>2019-08-20T08:25:59.688Z</updated>
     
@@ -210,14 +210,14 @@
     </summary>
     
     
-      <category term="教程" scheme="https://blog.laoliu.icu/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>群晖-MC基岩版服务器教程</title>
-    <link href="https://blog.laoliu.icu/archives/2716e842.html"/>
-    <id>https://blog.laoliu.icu/archives/2716e842.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/2716e842.html"/>
+    <id>https://blog.laoliu.eu.org/archives/2716e842.html</id>
     <published>2019-07-27T15:30:00.000Z</published>
     <updated>2020-02-16T05:29:49.157Z</updated>
     
@@ -228,14 +228,14 @@
     </summary>
     
     
-      <category term="教程" scheme="https://blog.laoliu.icu/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>年轻人的第一台NAS(误)-硬件选购</title>
-    <link href="https://blog.laoliu.icu/archives/757c72a1.html"/>
-    <id>https://blog.laoliu.icu/archives/757c72a1.html</id>
+    <link href="https://blog.laoliu.eu.org/archives/757c72a1.html"/>
+    <id>https://blog.laoliu.eu.org/archives/757c72a1.html</id>
     <published>2019-07-19T01:30:46.000Z</published>
     <updated>2019-08-20T08:24:49.669Z</updated>
     
@@ -246,7 +246,7 @@
     </summary>
     
     
-      <category term="教程" scheme="https://blog.laoliu.icu/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
