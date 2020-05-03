@@ -1,122 +1,178 @@
 <!DOCTYPE html>
 <html lang="zh-hans">
-    <head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="utf-8">
 
-    
 
-    <!--icon-->
-    
-        <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
-    
 
-    <!-- 渲染优化 -->
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- meta -->
-    
-    <title>群晖-外网访问一站式教程1 Zerotier | Lao_Liu Blog</title>
-    
-        <meta name="keywords" content="群晖,内网穿透,外网访问,Zerotier, no">
-    
-    
-        <meta name="description" content="如何从外网访问群晖服务器？最简单的方法-Zerotier。 -- Lao_Liu Blog">
-    
 
-    <!--Social link-->
-     
-        <meta name="twitter:card" content="summary_large_image ">
-        
-            <meta property="og:type" content="article">
-        
-        <meta property="og:locale" content="zh-hans">
-        <meta property="og:site_name" content="Lao_Liu Blog>">
-        <meta property="og:title" content="群晖-外网访问一站式教程1 Zerotier | Lao_Liu Blog ">
-        <meta property="og:description" content="如何从外网访问群晖服务器？最简单的方法-Zerotier。 -- Lao_Liu Blog ">
-        <meta property="og:image" content>
-     
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
+  <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="description" content="Lao_Liu`s Blog.">
+  <meta name="author" content="Lao_Liu">
+  <meta name="keywords" content="no">
+  <title>群晖-外网访问一站式教程1 Zerotier - Lao_Liu Blog</title>
 
-    <!-- feed -->
-    
-        <link rel="alternate" href="/atom.xml" title="Lao_Liu Blog">
-    
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css">
 
-    
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/style.min.css">
-    
-    
-        
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-theme-cards@0.1/dist/css/github.min.css" crossorigin="anonymous" media="none" onload="this.media='all'">
-        
-    
 
-    <!--LaTex-->
-    
+  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css">
 
-     
 
-    
-         
-    
-         
-    
+<!-- 主题依赖的图标库，不要自行修改 -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
+
+
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- 自定义样式保持在最底部 -->
+
 
 </head>
 
-    <body>
-        <div id="app">
-            <header class="header">
-    <div class="header__left">
-        
-            <a href="/" class="button">
-                <span class="logo__text">
-                    ← Lao_Liu Blog | 首页
-                </span>
-            </a>
-        
-    </div>
-    <div class="header__right">
-         
-    </div>
-</header>
 
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">&nbsp;<strong>Lao_Liu Blog</strong>&nbsp;</a>
 
-            <main class="main">
-    <div class="post-title">
-    <h1 class="post-title__text">
-        群晖-外网访问一站式教程1 Zerotier
-    </h1>
-    <div class="post-meta">
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
         
-            <a href="/archives/2019/08/" class="button" style="color: #808080;">
-    2019-08-20
-</a>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/">
+              <i class="iconfont icon-home-fill"></i>
+              Home</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/archives/">
+              <i class="iconfont icon-archive-fill"></i>
+              Archives</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/atom.xml">
+              <i class="iconfont icon-rss-fill"></i>
+              rss</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/links/">
+              <i class="iconfont icon-link-fill"></i>
+              Links</a>
+          </li>
+        
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="/about/">
+              <i class="iconfont icon-user-fill"></i>
+              About</a>
+          </li>
         
         
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="view intro-2" id="background" parallax="true" style="background: url('https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/banner_img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="container text-center white-text fadeInUp">
+            <span class="h2" id="subtitle">
+              
+            </span>
+
             
- 
-        
-        
-     
- 
+              
+                <div class="mt-3 post-meta">
+                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+                  <time datetime="2019-08-20 12:00">
+                    August 20, 2019 pm
+                  </time>
+                </div>
+              
 
-  
+              <div class="mt-1">
+                
+                  
+                  <span class="post-meta mr-2">
+                    <i class="iconfont icon-chart"></i>
+                    832 字
+                  </span>
+                
+
+                
+                  
+                  <span class="post-meta mr-2">
+                      <i class="iconfont icon-clock-fill"></i>
+                    
+                    
+                    8
+                     分钟
+                  </span>
+                
+
+                
+              </div>
+            
+          </div>
+
+          
+        </div>
+      </div>
     </div>
-</div>
-<div class="post content-box">
-    <div class="post__header">
-        
-             
-        
-    </div>
-    <div class="post__content">
-        <div class="markdown-body">
-            <p>说在前面：有一个月没更新文章了。今后尽量做到1-2周更一篇吧。Goo酱终于把我的Blog收录了（其实是我主动提交的），这些教程也能被大家看到啦！有任何问题可以在文章结尾的Gitalk处留言，我会尽快回复的！</p>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-md">
+      <div class="container nopadding-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <div class="post-content mx-auto" id="post">
+            
+            <article class="markdown-body">
+              <p>说在前面：有一个月没更新文章了。今后尽量做到1-2周更一篇吧。Goo酱终于把我的Blog收录了（其实是我主动提交的），这些教程也能被大家看到啦！有任何问题可以在文章结尾的Gitalk处留言，我会尽快回复的！</p>
 <p>这篇教程无图，省流。(其实经过Gzip压缩后已经能省80%的数据量，我也被惊到了)</p>
 <a id="more"></a>
 
@@ -143,151 +199,261 @@
 <h5 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h5><p>Zerotier适合访问网页/SSH等简单服务，若用其连接游戏，可能会有某些时刻丢包率过高（原因不明）导致强制登出，严重影响游戏体验。</p>
 <p>下一篇文章里我会介绍第二种方法-DDNS，此方法可以带来极致体验（笑）。</p>
 
+            </article>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                
+                  <div class="post-meta">
+                    <i class="iconfont icon-tags"></i>
+                    
+                      <a class="hover-with-bg" href="/tags/教程/">教程</a>
+                    
+                  </div>
+                
+              </div>
+              
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+              
+              
+                <div class="post-prevnext row">
+                  <div class="post-prev col-6">
+                    
+                    
+                      <a href="/archives/87bacf3f.html">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">群晖-外网访问一站式教程2 DDNS</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </div>
+                  <div class="post-next col-6">
+                    
+                    
+                      <a href="/archives/2716e842.html">
+                        <span class="hidden-mobile">群晖-MC基岩版服务器教程</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </div>
+                </div>
+              
+            </div>
+
+            
+              <!-- Comments -->
+              <div class="comments" id="comments">
+                
+                
+  <script defer src="https://utteranc.es/client.js" repo="Lao-Liu233/comments-utterances" issue-term="pathname" theme="github-light" crossorigin="anonymous">
+  </script>
+
+
+              </div>
+            
+          </div>
         </div>
+      </div>
     </div>
     
-        
-    <div class="post__license">
-        <p>
-            <strong>本文作者：Lao_Liu</strong>
-        </p>
-        
-            <p>
-                <strong>
-                    <p>文章默认使用 <a href="https://raw.githubusercontent.com/Lao-Liu233/LaoLiublog.github.io/master/LICENSE" rel="external nofollow noopener noreferrer" target="_blank">MIT</a> 协议进行许可，使用时请注意遵守协议。</p>
-
-                </strong>
-            </p>
-        
-        
-            <p>
-                <strong>
-                    本文链接：
-                </strong>
-                <a href="https://blog.laoliu.eu.org/archives/8776c6d2.html">https://blog.laoliu.eu.org/archives/8776c6d2.html</a>
-            </p>
-        
-    </div>
- 
-    
-    
-        <div class="post-meta post-footer__meta">
-    <p>
-        最后更新于：2019-08-20
-    </p>
-</div> 
-    
-    
-        <div class="post-cats post-card__cats">
-    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div id="tocbot"></div>
 </div>
 
-<div class="post-tags post-card__tags">
+      </div>
     
-        <a href="/tags/教程/" class="post-tags__link button"># 教程</a>
-    
-</div> 
-     
+  </div>
 </div>
-<br>
 
-    <div class="post__comment content-box">
-        
-    <h4 style="margin-top: 0;">Comments</h4>
-    
-    
-    
-        <div id="gitalk-container"></div>
-    
-    
-    
-    
-    
+<!-- Custom -->
 
 
-    </div>
+    
+  </main>
 
-
-</main>
-<footer class="footer">
-     
-
-
-     
   
-    
-        
-            <p>Copyright © 2020 </p>
+    <a id="scroll-top-button" href="#" role="button">
+      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+    </a>
+  
 
-        
-            <p>Powered by <a href="https://hexo.io" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" rel="external nofollow noopener noreferrer" target="_blank">Cards</a></p>
+  
+    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+  
 
-        
+  
+
+  
+
+  <footer class="mt-5">
+  <div class="text-center py-3">
+    <div>
+      <a href="https://hexo.io" target="_blank" rel="external nofollow noopener noreferrer"><span>Hexo</span></a>
+      <i class="iconfont icon-love"></i>
+      <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="external nofollow noopener noreferrer">
+        <span>Fluid</span></a>
+    </div>
     
+
+    
+
+    
+  </div>
 </footer>
 
-
-        </div>
-        <!-- lazyload -->
-
-    
-        <script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@latest/dist/lazyload.min.js"></script>
-    
-    <script>
-        window.lazyLoadOptions = {
-            elements_selector: ".lazyload",
-            threshold: 0
-        };
-    </script>
+<!-- SCRIPTS -->
+<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
 
 
- 
+  <script src="/js/lazyload.js"></script>
 
- 
 
- 
 
   
+  <script src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var boardCtn = $('#board-ctn');
+      var boardTop = boardCtn.offset().top;
 
-<!-- jQuery -->
- 
-
-<!-- fancybox -->
- 
-
-<!-- back to top -->
- 
-
-
-    
-    
-    
-    
-    
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-        <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-        <script>
-            var gitalk = new Gitalk({
-                clientID: "d9c3dcb0a92a92581c39",
-                clientSecret: "ddbbdb2f28d09a808b42d2eeb1dcf57838b5d5b7",
-                repo: "LaoLiublog.github.io",
-                owner: "Lao-Liu233",
-                admin: "Lao-Liu233",
-                id: window.location.pathname,
-                distractionFreeMode: false
-            });
-            gitalk.render('gitalk-container');
-        </script>
-    
-    
-    
-    
-    
-    
-    
-
-    
+      tocbot.init({
+        tocSelector: '#tocbot',
+        contentSelector: '.post-content',
+        headingSelector: 'h1,h2,h3,h4,h5,h6',
+        linkClass: 'tocbot-link',
+        activeLinkClass: 'tocbot-active-link',
+        listClass: 'tocbot-list',
+        isCollapsedClass: 'tocbot-is-collapsed',
+        collapsibleClass: 'tocbot-is-collapsible',
+        collapseDepth: 0,
+        scrollSmooth: true,
+        headingsOffset: -boardTop
+      });
+      if ($('.toc-list-item').length > 0) {
+        $('#toc').css('visibility', 'visible');
+      }
+    });
+  </script>
 
 
-    </body>
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+  <script src="/js/clipboard-use.js"></script>
+
+
+
+
+
+
+<!-- Plugins -->
+
+
+
+  <script src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js"></script>
+  <script>
+    var typed = new Typed('#subtitle', {
+      strings: [
+        '  ',
+        "群晖-外网访问一站式教程1 Zerotier&nbsp;",
+      ],
+      cursorChar: "_",
+      typeSpeed: 70,
+      loop: false,
+    });
+    typed.stop();
+    $(document).ready(function () {
+      $(".typed-cursor").addClass("h2");
+      typed.start();
+    });
+  </script>
+
+
+
+  <script src="https://cdn.staticfile.org/anchor-js/4.2.2/anchor.min.js"></script>
+  <script>
+    anchors.options = {
+      placement: "right",
+      visible: "hover",
+      
+    };
+    var el = "h1,h2,h3,h4,h5,h6".split(",");
+    var res = [];
+    for (item of el) {
+      res.push(".markdown-body > " + item)
+    }
+    anchors.add(res.join(", "))
+  </script>
+
+
+
+  <script src="/js/local-search.js"></script>
+  <script>
+    var path = "/local-search.xml";
+    var inputArea = document.querySelector("#local-search-input");
+    inputArea.onclick = function () {
+      searchFunc(path, 'local-search-input', 'local-search-result');
+      this.onclick = null
+    }
+  </script>
+
+
+
+  <script src="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <script>
+    $('#post img:not(.no-zoom img, img[no-zoom]), img[zoom]').each(
+      function () {
+        var element = document.createElement('a');
+        $(element).attr('data-fancybox', 'images');
+        $(element).attr('href', $(this).attr('src'));
+        $(this).wrap(element);
+      }
+    );
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
 </html>
