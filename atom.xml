@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2020-04-08T14:00:23.959Z</updated>
+  <updated>2020-05-04T12:28:42.432Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>博客迁移-主题更换与近况报告</title>
+    <link href="https://blog.laoliu.eu.org/archives/911a91db.html"/>
+    <id>https://blog.laoliu.eu.org/archives/911a91db.html</id>
+    <published>2020-05-04T01:58:17.000Z</published>
+    <updated>2020-05-04T12:28:42.432Z</updated>
+    
+    <summary type="html">
+    
+      博客迁移-主题更换与近况报告
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>BGP初体验-Linux,Openwrt与Quagga</title>
