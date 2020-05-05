@@ -16,7 +16,7 @@
   <meta name="description" content="Lao_Liu`s Blog.">
   <meta name="author" content="Lao_Liu">
   <meta name="keywords" content="no">
-  <title>群晖-外网访问一站式教程2 DDNS - Lao_Liu Blog</title>
+  <title>提升音乐体验-本地音乐标签/歌词匹配与回放增益 - Lao_Liu Blog</title>
 
   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css">
@@ -122,8 +122,8 @@
               
                 <div class="mt-3 post-meta">
                   <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-                  <time datetime="2019-08-31 18:30">
-                    August 31, 2019 pm
+                  <time datetime="2020-05-05 13:40">
+                    May 5, 2020 pm
                   </time>
                 </div>
               
@@ -133,7 +133,7 @@
                   
                   <span class="post-meta mr-2">
                     <i class="iconfont icon-chart"></i>
-                    366 字
+                    556 字
                   </span>
                 
 
@@ -143,7 +143,7 @@
                       <i class="iconfont icon-clock-fill"></i>
                     
                     
-                    3
+                    5
                      分钟
                   </span>
                 
@@ -172,20 +172,45 @@
           <div class="post-content mx-auto" id="post">
             
             <article class="markdown-body">
-              <h4 id="什么是DDNS"><a href="#什么是DDNS" class="headerlink" title="什么是DDNS"></a>什么是DDNS</h4><p><a href="https://zh.m.wikipedia.org/zh/%E5%8B%95%E6%85%8BDNS" rel="external nofollow noopener noreferrer" target="_blank">维基百科-动态DNS</a><br>鉴于IPv4地址的枯竭，运营商开始给家用宽带分配动态IP地址，即IP会随时间或重新拨号而改变。DDNS可以允许用户通过API动态地将变化的IP地址传送给域名解析商，达到域名外网访问的效果。<br>由于带宽分配原因，家用宽带的上传带宽一般在20-30mbps间，故外网访问速度并没有达到如签约的100mbps属正常。</p>
-<hr>
-<h4 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h4><p>打电话给ISP（运营商）的小姐姐，让她给你公网IP，如果问起原因可以回答家里装监控。没有开启公网IP将无法从外网访问家庭的内部网络。<br>由于运营商（指大部分，如电信）封锁了80（HTTP）和443（HTTPS）端口，我们将使用其他的端口进行访问。挑选一些你喜欢的端口，预备使用（如8080-8090，4431-4439等）。</p>
+              <p>推荐两款能让听歌体验变得更好的软件 —— Music Tag / Foobar2000 。</p>
+<p>附带使用教程。</p>
 <a id="more"></a>
 
-<hr>
-<h4 id="选择支持DDNS的域名解析服务商"><a href="#选择支持DDNS的域名解析服务商" class="headerlink" title="选择支持DDNS的域名解析服务商"></a>选择支持DDNS的域名解析服务商</h4><h5 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h5><p>老牌的域名解析商，也是少有的免费提供CDN的服务商。<br>我推荐Cloudflare的原因有三点</p>
-<ol>
-<li>可以使用CDN，保证网络质量始终处于较好状态。例如，我的Blog搭建在Github上，若有时因网络抽风无法访问Github，CDN能助你一臂之力。</li>
-<li>可以查看连接数，数据量，访客量等详细数据。</li>
-<li>API获取方便。</li>
-</ol>
-<hr>
-<h5 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h5>
+<h2 id="音乐标签-Music-Tag"><a href="#音乐标签-Music-Tag" class="headerlink" title="音乐标签 Music Tag"></a>音乐标签 Music Tag</h2><h3 id="官方网站-下载地址"><a href="#官方网站-下载地址" class="headerlink" title="官方网站/下载地址"></a>官方网站/下载地址</h3><p><a href="https://www.cnblogs.com/vinlxc/p/11347744.html" rel="external nofollow noopener noreferrer" target="_blank">https://www.cnblogs.com/vinlxc/p/11347744.html</a></p>
+<h3 id="软件特点"><a href="#软件特点" class="headerlink" title="软件特点"></a>软件特点</h3><p>古人云，专辑封面是一首歌的灵魂。（我乱说的）</p>
+<p>Music Tag 是一款可以自动匹配本地音乐的标签与歌词的软件。</p>
+<p>一键从多家音乐网站拉取元数据/封面图/歌词，不能再爽了。</p>
+<h3 id="使用教程-建议"><a href="#使用教程-建议" class="headerlink" title="使用教程/建议"></a>使用教程/建议</h3><p>导入一批歌曲后，选择 自动匹配标签 ：（如下图）</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/music-tag-1.png" srcset="/img/loading.gif" alt></p>
+<p>然后按下图配置，在原有元数据下添加更多信息：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/music-tag-2.png" srcset="/img/loading.gif" alt></p>
+<p>在第一轮匹配后，建议再进行第二轮封面图片匹配，并覆盖原图片，配置如下图：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/music-tag-3.png" srcset="/img/loading.gif" alt></p>
+<p>接着，就需要你耐心地查看每首歌的元数据（善用方向键），检查是否有匹配错误的歌曲，并在 标签源-组合标签 处手动搜索，选择正确的元数据，如下图所示：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/music-tag-4.png" srcset="/img/loading.gif" alt></p>
+<p>建议检查一下歌曲的歌词，特别是较小众的歌曲。Music Tag 的歌词搜索错误率较高。</p>
+<p>如下图所示，选择并查看歌词，若有误可以手动搜索：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/music-tag-5.png" srcset="/img/loading.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/music-tag-6.png" srcset="/img/loading.gif" alt></p>
+<p>最后选择导出 LRC 歌词：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/music-tag-7.png" srcset="/img/loading.gif" alt></p>
+<p>所有歌曲的 元数据-封面图-歌词 就此已匹配完毕。</p>
+<p>最终效果如下：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/foobar2000-m.jpg" srcset="/img/loading.gif" alt></p>
+<h2 id="Foobar2000"><a href="#Foobar2000" class="headerlink" title="Foobar2000"></a>Foobar2000</h2><h3 id="官方网站"><a href="#官方网站" class="headerlink" title="官方网站"></a>官方网站</h3><p><a href="http://www.foobar2000.org/" rel="external nofollow noopener noreferrer" target="_blank">http://www.foobar2000.org/</a></p>
+<h3 id="回放增益介绍"><a href="#回放增益介绍" class="headerlink" title="回放增益介绍"></a>回放增益介绍</h3><p><a href="https://zh.wikipedia.org/wiki/回放增益" rel="external nofollow noopener noreferrer" target="_blank">维基百科-回放增益</a></p>
+<p>回放增益可以使音量大小各不相同的音乐向统一标准靠齐。</p>
+<p>将所有音乐扫描并打上回放增益 tag 后，再也不用担心下一首歌震破耳膜了。</p>
+<h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><p>导入并全选歌曲，右键，选择 ReplayGain ：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/foobar2000-1.png" srcset="/img/loading.gif" alt></p>
+<p>下列三种扫描方式均可。个人喜欢将全部歌曲的音量统一，故选择第一种：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/foobar2000-2.png" srcset="/img/loading.gif" alt></p>
+<p>待扫描结束后，点击 Update File Tags ，将回放增益数据写入文件 Tag ：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/local-music/foobar2000-3.png" srcset="/img/loading.gif" alt></p>
+<p>回放增益扫描完毕。</p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>我是一周不往曲库里添加新曲就受不了的类型。</p>
+<p>这几天往曲库里添加曲子的时候查阅了这些能提升音乐体验的方法，希望能帮到你。</p>
+
             </article>
             <hr>
             <div>
@@ -196,6 +221,8 @@
                     <i class="iconfont icon-tags"></i>
                     
                       <a class="hover-with-bg" href="/tags/教程/">教程</a>
+                    
+                      <a class="hover-with-bg" href="/tags/软件/">软件</a>
                     
                   </div>
                 
@@ -208,18 +235,12 @@
                   <div class="post-prev col-6">
                     
                     
-                      <a href="/archives/330720fc.html">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">对于“智慧校园”与人脸识别的一些看法</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </div>
                   <div class="post-next col-6">
                     
                     
-                      <a href="/archives/8776c6d2.html">
-                        <span class="hidden-mobile">群晖-外网访问一站式教程1 Zerotier</span>
+                      <a href="/archives/911a91db.html">
+                        <span class="hidden-mobile">博客迁移-主题更换与近况报告</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -367,7 +388,7 @@
     var typed = new Typed('#subtitle', {
       strings: [
         '  ',
-        "群晖-外网访问一站式教程2 DDNS&nbsp;",
+        "提升音乐体验-本地音乐标签/歌词匹配与回放增益&nbsp;",
       ],
       cursorChar: "_",
       typeSpeed: 70,

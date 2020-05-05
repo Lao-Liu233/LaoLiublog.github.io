@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2020-05-04T12:47:33.706Z</updated>
+  <updated>2020-05-05T05:35:18.777Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>提升音乐体验-本地音乐标签/歌词匹配与回放增益</title>
+    <link href="https://blog.laoliu.eu.org/archives/6b40e5ad.html"/>
+    <id>https://blog.laoliu.eu.org/archives/6b40e5ad.html</id>
+    <published>2020-05-05T05:40:06.000Z</published>
+    <updated>2020-05-05T05:35:18.777Z</updated>
+    
+    <summary type="html">
+    
+      推荐两款能让听歌体验变得更好的软件 —— Music Tag / Foobar2000
+    
+    </summary>
+    
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="软件" scheme="https://blog.laoliu.eu.org/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>博客迁移-主题更换与近况报告</title>
@@ -201,7 +221,7 @@
     <link href="https://blog.laoliu.eu.org/archives/87bacf3f.html"/>
     <id>https://blog.laoliu.eu.org/archives/87bacf3f.html</id>
     <published>2019-08-31T10:30:00.000Z</published>
-    <updated>2019-08-31T10:56:59.301Z</updated>
+    <updated>2020-05-05T05:25:19.485Z</updated>
     
     <summary type="html">
     
