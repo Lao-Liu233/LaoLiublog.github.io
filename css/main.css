@@ -597,8 +597,17 @@ sup > a::before,
 .navbar .dropdown-item:hover {
   color: #1abc9c;
 }
-.navbar .dropdown-collapse {
-  background-color: #2f4154;
+@supports (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px)) {
+  .navbar .dropdown-collapse {
+    background: rgba(47,65,84,0.7);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))) {
+  .navbar .dropdown-collapse {
+    background: #2f4154;
+  }
 }
 .navbar-custom {
   color: white;
@@ -606,11 +615,29 @@ sup > a::before,
 .navbar-custom a {
   color: white;
 }
-.top-nav-collapse {
-  background-color: #2f4154;
+@supports (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px)) {
+  .top-nav-collapse {
+    background: rgba(47,65,84,0.7);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
 }
-.navbar-col-show {
-  background-color: #2f4154;
+@supports not ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))) {
+  .top-nav-collapse {
+    background: #2f4154;
+  }
+}
+@supports (-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px)) {
+  .navbar-col-show {
+    background: rgba(47,65,84,0.7);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+}
+@supports not ((-webkit-backdrop-filter: blur(3px)) or (backdrop-filter: blur(3px))) {
+  .navbar-col-show {
+    background: #2f4154;
+  }
 }
 @media (max-width: 767px) {
   .navbar {
