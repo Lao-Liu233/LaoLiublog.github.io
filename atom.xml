@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2020-05-05T05:36:00.977Z</updated>
+  <updated>2020-06-07T14:21:32.054Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -21,13 +21,15 @@
     <link href="https://blog.laoliu.eu.org/archives/6b40e5ad.html"/>
     <id>https://blog.laoliu.eu.org/archives/6b40e5ad.html</id>
     <published>2020-05-05T05:40:06.000Z</published>
-    <updated>2020-05-05T05:36:00.977Z</updated>
+    <updated>2020-06-07T14:21:32.054Z</updated>
     
     <summary type="html">
     
       推荐两款能让听歌体验变得更好的软件 —— Music Tag / Foobar2000
     
     </summary>
+    
+      <category term="软件推荐" scheme="https://blog.laoliu.eu.org/categories/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/"/>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
@@ -41,13 +43,15 @@
     <link href="https://blog.laoliu.eu.org/archives/911a91db.html"/>
     <id>https://blog.laoliu.eu.org/archives/911a91db.html</id>
     <published>2020-05-04T01:58:17.000Z</published>
-    <updated>2020-05-04T12:47:33.706Z</updated>
+    <updated>2020-06-07T14:21:10.460Z</updated>
     
     <summary type="html">
     
       博客迁移-主题更换与近况报告
     
     </summary>
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
@@ -59,13 +63,15 @@
     <link href="https://blog.laoliu.eu.org/archives/e3c95af8.html"/>
     <id>https://blog.laoliu.eu.org/archives/e3c95af8.html</id>
     <published>2020-02-10T04:30:00.000Z</published>
-    <updated>2020-04-08T14:00:23.959Z</updated>
+    <updated>2020-06-07T14:20:37.062Z</updated>
     
     <summary type="html">
     
       Lao_Liu的BGP初体验。
     
     </summary>
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
@@ -77,13 +83,15 @@
     <link href="https://blog.laoliu.eu.org/archives/9d1c6fa4.html"/>
     <id>https://blog.laoliu.eu.org/archives/9d1c6fa4.html</id>
     <published>2020-01-06T10:00:00.000Z</published>
-    <updated>2020-01-06T12:23:17.723Z</updated>
+    <updated>2020-06-07T14:22:10.971Z</updated>
     
     <summary type="html">
     
       Joplin使用群晖搭建的Webdav同步会遇到问题，这是可能的解决方案。
     
     </summary>
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
@@ -95,13 +103,15 @@
     <link href="https://blog.laoliu.eu.org/archives/c7a0a8db.html"/>
     <id>https://blog.laoliu.eu.org/archives/c7a0a8db.html</id>
     <published>2019-10-31T15:00:00.000Z</published>
-    <updated>2020-05-02T09:39:00.321Z</updated>
+    <updated>2020-06-07T14:24:15.275Z</updated>
     
     <summary type="html">
     
       “Laika Still Wants Go Home”，一张触动了我的专辑。
     
     </summary>
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
@@ -113,13 +123,15 @@
     <link href="https://blog.laoliu.eu.org/archives/ff412ce9.html"/>
     <id>https://blog.laoliu.eu.org/archives/ff412ce9.html</id>
     <published>2019-10-25T14:30:00.000Z</published>
-    <updated>2020-02-16T05:28:53.939Z</updated>
+    <updated>2020-06-07T14:21:52.850Z</updated>
     
     <summary type="html">
     
       GOROGOA-精华，你的成果如何。一部富有哲理的优秀作品。
     
     </summary>
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
@@ -149,13 +161,15 @@
     <link href="https://blog.laoliu.eu.org/archives/27f2d840.html"/>
     <id>https://blog.laoliu.eu.org/archives/27f2d840.html</id>
     <published>2019-10-03T15:30:00.000Z</published>
-    <updated>2019-10-03T15:45:07.311Z</updated>
+    <updated>2020-06-07T14:20:15.510Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;下面Lao_Liu介绍一种适用于iPv6-DDNS的绝佳方法！&lt;/p&gt;
     
     </summary>
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
@@ -167,13 +181,15 @@
     <link href="https://blog.laoliu.eu.org/archives/a4c81e8f.html"/>
     <id>https://blog.laoliu.eu.org/archives/a4c81e8f.html</id>
     <published>2019-10-02T10:30:00.000Z</published>
-    <updated>2020-03-06T06:53:20.583Z</updated>
+    <updated>2020-06-07T14:23:12.970Z</updated>
     
     <summary type="html">
     
       利用群晖or其他系统搭建Calibre-Web服务器，管理电子书。
     
     </summary>
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
@@ -203,13 +219,15 @@
     <link href="https://blog.laoliu.eu.org/archives/330720fc.html"/>
     <id>https://blog.laoliu.eu.org/archives/330720fc.html</id>
     <published>2019-09-14T10:00:00.000Z</published>
-    <updated>2019-09-14T10:15:14.406Z</updated>
+    <updated>2020-06-07T14:24:37.425Z</updated>
     
     <summary type="html">
     
       对于“智慧校园”与人脸识别的一些看法。
     
     </summary>
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
       <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
@@ -221,13 +239,15 @@
     <link href="https://blog.laoliu.eu.org/archives/87bacf3f.html"/>
     <id>https://blog.laoliu.eu.org/archives/87bacf3f.html</id>
     <published>2019-08-31T10:30:00.000Z</published>
-    <updated>2020-05-05T05:25:19.485Z</updated>
+    <updated>2020-06-07T14:23:49.645Z</updated>
     
     <summary type="html">
     
       如何从外网访问群晖服务器？最有效的方法-DDNS。
     
     </summary>
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
@@ -239,13 +259,15 @@
     <link href="https://blog.laoliu.eu.org/archives/8776c6d2.html"/>
     <id>https://blog.laoliu.eu.org/archives/8776c6d2.html</id>
     <published>2019-08-20T04:00:00.000Z</published>
-    <updated>2019-08-20T08:25:59.688Z</updated>
+    <updated>2020-06-07T14:22:50.340Z</updated>
     
     <summary type="html">
     
       如何从外网访问群晖服务器？最简单的方法-Zerotier。
     
     </summary>
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
@@ -257,13 +279,15 @@
     <link href="https://blog.laoliu.eu.org/archives/2716e842.html"/>
     <id>https://blog.laoliu.eu.org/archives/2716e842.html</id>
     <published>2019-07-27T15:30:00.000Z</published>
-    <updated>2020-02-16T05:29:49.157Z</updated>
+    <updated>2020-06-07T14:22:28.625Z</updated>
     
     <summary type="html">
     
       在群晖服务器上搭建Minecraft基岩版服务器。
     
     </summary>
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
