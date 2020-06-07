@@ -19,24 +19,29 @@
   <title>BGP初体验-Linux,Openwrt与Quagga - Lao_Liu Blog</title>
 
   <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css">
 
 
-  <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/github-markdown-css/4.0.0/github-markdown.min.css">
+  <link rel="stylesheet" href="/lib/hint/hint.min.css">
+
+  
+    <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css">
+  
+
+  
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_fmb4a04yx8h.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
-
-
 
 <link rel="stylesheet" href="/css/main.css">
 
 <!-- 自定义样式保持在最底部 -->
 
 
+  <script src="/js/utils.js"></script>
 </head>
 
 
@@ -57,47 +62,62 @@
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/">
-              <i class="iconfont icon-home-fill"></i>
-              Home</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
         
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/archives/">
-              <i class="iconfont icon-archive-fill"></i>
-              Archives</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
         
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/atom.xml">
-              <i class="iconfont icon-rss-fill"></i>
-              rss</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/atom.xml">
+                <i class="iconfont icon-rss-fill"></i>
+                rss
+              </a>
+            </li>
+          
         
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/links/">
-              <i class="iconfont icon-link-fill"></i>
-              Links</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                Links
+              </a>
+            </li>
+          
         
           
           
           
-          <li class="nav-item">
-            <a class="nav-link" href="/about/">
-              <i class="iconfont icon-user-fill"></i>
-              About</a>
-          </li>
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
         
         
           <li class="nav-item" id="search-btn">
@@ -120,36 +140,38 @@
 
             
               
-                <div class="mt-3 post-meta">
-                  <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-                  <time datetime="2020-02-10 12:30">
-                    February 10, 2020 pm
-                  </time>
-                </div>
-              
+  <div class="mt-3 post-meta">
+    <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+    <time datetime="2020-02-10 12:30">
+      February 10, 2020 pm
+    </time>
+  </div>
 
-              <div class="mt-1">
-                
-                  
-                  <span class="post-meta mr-2">
-                    <i class="iconfont icon-chart"></i>
-                    698 字
-                  </span>
-                
 
-                
-                  
-                  <span class="post-meta mr-2">
-                      <i class="iconfont icon-clock-fill"></i>
-                    
-                    
-                    9
-                     分钟
-                  </span>
-                
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      698 字
+    </span>
+  
 
-                
-              </div>
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      9
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
             
           </div>
 
@@ -191,8 +213,8 @@
 <pre><code class="hljs undefined">! 登陆密码
 password zebra
 !
-access-list vty permit 127.0.0.0/8
-access-list vty deny any
+access-<span class="hljs-type">list</span> vty permit <span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.0</span>/<span class="hljs-number">8</span>
+access-<span class="hljs-type">list</span> vty deny any
 !
 line vty
  access-class vty</code></pre>
@@ -201,14 +223,14 @@ line vty
 <pre><code class="hljs undefined">! 密码
 password zebra
 ! AS号
-router bgp 114514
+router<span class="hljs-built_in"> bgp </span>114514
 ! 本机公网（VPN网络）ip
- bgp router-id 10.0.1.1
+<span class="hljs-built_in"> bgp </span>router-id 10.0.1.1
 ! 本路由享有网段（需要交换的网段）
- network 10.0.1.0/24
+<span class="hljs-built_in"> network </span>10.0.1.0/24
 ! peer信息（建立连接的机器的公网（VPN网络）ip，AS及称呼）
- neighbor 10.0.2.1 remote-as 1919810
- neighbor 10.0.2.1 description R2</code></pre>
+<span class="hljs-built_in"> neighbor </span>10.0.2.1 remote-as 1919810
+<span class="hljs-built_in"> neighbor </span>10.0.2.1 description R2</code></pre>
 
 <p> 另一台机器的配置只需依葫芦画瓢，我就不再赘述。</p>
 <p>配置之后，运行</p>
@@ -224,9 +246,9 @@ router bgp 114514
 <p>输入</p>
 <p><code>show ip bgp neighbor</code></p>
 <p>就会看到</p>
-<pre><code class="hljs undefined">BGP neighbor is 10.0.2.1, remote AS 1919810, local AS 114514, external link
-Description: R2
-BGP version 4, remote router ID 10.0.2.1</code></pre>
+<pre><code class="hljs undefined">BGP<span class="hljs-built_in"> neighbor </span>is 10.0.2.1, remote AS 1919810, local AS 114514, external link
+Description: R2<span class="hljs-built_in">
+BGP </span>version 4, remote router ID 10.0.2.1</code></pre>
 
 <p>还有这么一张表</p>
 <pre><code>                     Sent       Rcvd
@@ -280,7 +302,7 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
               
               
                 <div class="post-prevnext row">
@@ -290,7 +312,7 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
                       <a href="/archives/911a91db.html">
                         <i class="iconfont icon-arrowleft"></i>
                         <span class="hidden-mobile">博客迁移-主题更换与近况报告</span>
-                        <span class="visible-mobile">上一篇</span>
+                        <span class="visible-mobile">Previous</span>
                       </a>
                     
                   </div>
@@ -299,7 +321,7 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
                     
                       <a href="/archives/9d1c6fa4.html">
                         <span class="hidden-mobile">Joplin+Webdav同步问题的解决方案</span>
-                        <span class="visible-mobile">下一篇</span>
+                        <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
@@ -313,7 +335,20 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
               <div class="comments" id="comments">
                 
                 
-  <script defer src="https://utteranc.es/client.js" repo="Lao-Liu233/comments-utterances" issue-term="pathname" theme="github-light" crossorigin="anonymous">
+  <script type="text/javascript">
+    function loadUtterances() {
+      var s = document.createElement('script');
+      s.setAttribute('src', 'https://utteranc.es/client.js');
+      s.defer = false
+      s.setAttribute('repo', 'Lao-Liu233/comments-utterances');
+      s.setAttribute('issue-term', 'pathname');
+      
+      s.setAttribute('theme', 'github-light');
+      s.setAttribute('crossorigin', 'anonymous');
+      var e = document.getElementsByTagName('script')[0];
+      e.parentNode.insertBefore(s, e);
+    }
+    createObserver(loadUtterances, 'comments')
   </script>
 
 
@@ -392,14 +427,27 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
 <!-- SCRIPTS -->
 <script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<script src="/js/debouncer.js"></script>
 <script src="/js/main.js"></script>
 
-
-  <script src="/js/lazyload.js"></script>
-
+<!-- Plugins -->
 
 
   
+    <script src="/js/lazyload.js"></script>
+  
+
+
+
+  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
+  <script src="/js/clipboard-use.js"></script>
+
+
+
+
+
+
+
   <script src="https://cdn.staticfile.org/tocbot/4.11.1/tocbot.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -408,7 +456,7 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
 
       tocbot.init({
         tocSelector: '#tocbot',
-        contentSelector: '.post-content',
+        contentSelector: 'article.markdown-body',
         headingSelector: 'h1,h2,h3,h4,h5,h6',
         linkClass: 'tocbot-link',
         activeLinkClass: 'tocbot-active-link',
@@ -424,20 +472,6 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
       }
     });
   </script>
-
-
-
-
-
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
-  <script src="/js/clipboard-use.js"></script>
-
-
-
-
-
-
-<!-- Plugins -->
 
 
 
@@ -503,6 +537,8 @@ Total:               1054       1051</code></pre><p>再看看路由器内的活�
       }
     );
   </script>
+
+
 
 
 
