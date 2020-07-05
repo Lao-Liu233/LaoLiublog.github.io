@@ -1,7 +1,7 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-hans">
-
-
+<html lang="zh-hans" data-default-color-scheme="&#34;auto&#34;">
 
 
 
@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="/lib/hint/hint.min.css">
 
   
+    
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/github-gist.min.css">
   
 
@@ -32,7 +33,7 @@
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
@@ -42,6 +43,7 @@
 
 
   <script src="/js/utils.js"></script>
+  <script src="/js/color-schema.js"></script>
 </head>
 
 
@@ -67,18 +69,6 @@
               <a class="nav-link" href="/">
                 <i class="iconfont icon-home-fill"></i>
                 Home
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                Categories
               </a>
             </li>
           
@@ -133,7 +123,12 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
       </ul>
@@ -141,11 +136,11 @@
   </div>
 </nav>
 
-    <div class="view intro-2" id="background" parallax="true" style="background: url('https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/banner_img/default.jpg') no-repeat center center;
+    <div class="banner intro-2" id="background" parallax="true" style="background: url('https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/banner_img/default.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fadeInUp">
+          <div class="container text-center white-text fade-in-up">
             <span class="h2" id="subtitle">
               
             </span>
@@ -274,7 +269,7 @@
                 
               </div>
               
-                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 4.0 协议</a> ，转载请注明出处！</p>
+                <p class="note note-warning">本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 3.0协议</a> 。转载请注明出处！</p>
               
               
                 <div class="post-prevnext row">
@@ -301,21 +296,24 @@
               <div class="comments" id="comments">
                 
                 
-  <script type="text/javascript">
-    function loadUtterances() {
-      var s = document.createElement('script');
-      s.setAttribute('src', 'https://utteranc.es/client.js');
-      s.defer = false
-      s.setAttribute('repo', 'Lao-Liu233/comments-utterances');
-      s.setAttribute('issue-term', 'pathname');
-      
-      s.setAttribute('theme', 'github-light');
-      s.setAttribute('crossorigin', 'anonymous');
-      var e = document.getElementsByTagName('script')[0];
-      e.parentNode.insertBefore(s, e);
-    }
-    createObserver(loadUtterances, 'comments')
-  </script>
+  <div class="disqus" style="width:100%">
+    <div id="disqus_thread"></div>
+    <script>
+      function loadDisqus() {
+        addCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+        addScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
+          new DisqusJS({
+            shortname: 'Lao_Liu',
+            apikey: '40kybqJWJ9hE7KmqB075Bm98aTKejvoMeBM9moEl5e5BNZnNd5q5RQTMexr5C5Gv'
+          });
+        });
+      }
+      waitElementVisible(loadDisqus, 'disqus_thread');
+    </script>
+    <noscript>Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a>
+    </noscript>
+  </div>
 
 
               </div>
