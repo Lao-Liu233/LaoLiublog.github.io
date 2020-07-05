@@ -1,49 +1,22 @@
 // eslint-disable-next-line no-unused-vars
-function waitElementVisible(targetId, callback) {
+function createObserver(func, obid) {
   var runningOnBrowser = typeof window !== 'undefined';
   var isBot = (runningOnBrowser && !('onscroll' in window)) || (typeof navigator !== 'undefined'
     && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
   var supportsIntersectionObserver = runningOnBrowser && 'IntersectionObserver' in window;
   if (!isBot && supportsIntersectionObserver) {
-    var io = new IntersectionObserver(function(entries, ob) {
+    var io = new IntersectionObserver(function(entries) {
       if (entries[0].isIntersecting) {
-        callback && callback();
-        ob.disconnect();
+        func();
+        io.disconnect();
       }
     }, {
       threshold : [0],
       rootMargin: (window.innerHeight || document.documentElement.clientHeight) + 'px'
     });
-    io.observe(document.getElementById(targetId));
+    io.observe(document.getElementById(obid));
   } else {
-    callback && callback();
-  }
-}
-
-// eslint-disable-next-line no-unused-vars
-function waitElementLoaded(targetId, callback) {
-  var runningOnBrowser = typeof window !== 'undefined';
-  var isBot = (runningOnBrowser && !('onscroll' in window)) || (typeof navigator !== 'undefined'
-    && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent));
-  if (!runningOnBrowser || isBot) {
-    return;
-  }
-
-  if ('MutationObserver' in window) {
-    var mo = new MutationObserver(function(records, ob) {
-      var ele = document.getElementById(targetId);
-      if (ele) {
-        callback && callback();
-        ob.disconnect();
-      }
-    });
-    mo.observe(document, { childList: true, subtree: true });
-  } else {
-    var oldLoad = window.onload;
-    window.onload = function() {
-      oldLoad && oldLoad();
-      callback && callback();
-    };
+    func();
   }
 }
 
