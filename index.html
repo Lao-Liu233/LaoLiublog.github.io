@@ -1,7 +1,7 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-hans">
-
-
+<html lang="zh-hans" data-default-color-scheme="&#34;auto&#34;">
 
 
 
@@ -23,7 +23,7 @@
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
@@ -33,6 +33,7 @@
 
 
   <script src="/js/utils.js"></script>
+  <script src="/js/color-schema.js"></script>
 </head>
 
 
@@ -112,7 +113,12 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
       </ul>
@@ -124,7 +130,7 @@
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fade-in-up">
+          <div class="container page-header text-center fade-in-up">
             <span class="h2" id="subtitle">
               
             </span>
@@ -156,22 +162,29 @@
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/6b40e5ad.html">提升音乐体验-本地音乐标签/歌词匹配与回放增益</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/6b40e5ad.html">提升音乐体验-本地音乐标签/歌词匹配与回放增益</a>
+      </h1>
 
-      <a href="/archives/6b40e5ad.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/6b40e5ad.html">
           
-        
-        <div>推荐两款能让听歌体验变得更好的软件 —— Music Tag / Foobar2000 。
-附带使用教程。</div>
-      </a>
+          
+            
+          
+          推荐两款能让听歌体验变得更好的软件 —— Music Tag / Foobar2000 。
+附带使用教程。
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-05-05
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-05 13:40" pubdate>
+              2020-05-05
+            </time>
           </div>
         
         
@@ -193,29 +206,36 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/911a91db.html">博客迁移-主题更换与近况报告</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/911a91db.html">博客迁移-主题更换与近况报告</a>
+      </h1>
 
-      <a href="/archives/911a91db.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/911a91db.html">
           
-        
-        <div>又好久不见。
+          
+            
+          
+          又好久不见。
 这两天抽空更换了博客的主题，并迁移至永久域名 blog.laoliu.eu.org 。
-以及谈一谈新开的项目的设计思路，有兴趣的读者还请慢慢阅读。</div>
-      </a>
+以及谈一谈新开的项目的设计思路，有兴趣的读者还请慢慢阅读。
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-05-04
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-05-04 09:58" pubdate>
+              2020-05-04
+            </time>
           </div>
         
         
@@ -235,28 +255,35 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/e3c95af8.html">BGP初体验-Linux,Openwrt与Quagga</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/e3c95af8.html">BGP初体验-Linux,Openwrt与Quagga</a>
+      </h1>
 
-      <a href="/archives/e3c95af8.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/e3c95af8.html">
           
-        
-        <div>好久没写博客了！今天抽出点时间分享一下我的BGP初体验。
-这一切的一切都要从一个叫鹤伞Ria的Vtuber说起……</div>
-      </a>
+          
+            
+          
+          好久没写博客了！今天抽出点时间分享一下我的BGP初体验。
+这一切的一切都要从一个叫鹤伞Ria的Vtuber说起……
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-02-10
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-02-10 12:30" pubdate>
+              2020-02-10
+            </time>
           </div>
         
         
@@ -276,27 +303,34 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/9d1c6fa4.html">Joplin+Webdav同步问题的解决方案</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/9d1c6fa4.html">Joplin+Webdav同步问题的解决方案</a>
+      </h1>
 
-      <a href="/archives/9d1c6fa4.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/9d1c6fa4.html">
           
-        
-        <div>问题内容在群晖上搭建了Webdav服务器，使用Joplin连接后无法同步笔记。</div>
-      </a>
+          
+            
+          
+          问题内容在群晖上搭建了Webdav服务器，使用Joplin连接后无法同步笔记。
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2020-01-06
+            <i class="iconfont icon-date"></i>
+            <time datetime="2020-01-06 18:00" pubdate>
+              2020-01-06
+            </time>
           </div>
         
         
@@ -316,27 +350,34 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/c7a0a8db.html">莱卡依然想要回家</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/c7a0a8db.html">莱卡依然想要回家</a>
+      </h1>
 
-      <a href="/archives/c7a0a8db.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/c7a0a8db.html">
           
-        
-        <div>有幸在/home/rynco/music Channel遇见这张专辑。第一次听，或许是风格合口，我立刻爱上了这首名为“Laika Still Wants Go Home”，与专辑同名的轻音乐。很有力量。这是这张专辑给我的第一印象。我几乎没有乐理知识，对于音乐的评论总是如此无力。这首歌从旋律看也好，从节奏看也好，感觉整体把控得很恰当，张弛有度。我贫瘠的语言真的无法形容那种美的感觉。</div>
-      </a>
+          
+            
+          
+          有幸在/home/rynco/music Channel遇见这张专辑。第一次听，或许是风格合口，我立刻爱上了这首名为“Laika Still Wants Go Home”，与专辑同名的轻音乐。很有力量。这是这张专辑给我的第一印象。我几乎没有乐理知识，对于音乐的评论总是如此无力。这首歌从旋律看也好，从节奏看也好，感觉整体把控得很恰当，张弛有度。我贫瘠的语言真的无法形容那种美的感觉。
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2019-10-31
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-31 23:00" pubdate>
+              2019-10-31
+            </time>
           </div>
         
         
@@ -356,27 +397,34 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/ff412ce9.html">GOROGOA-精华，你的成果如何</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/ff412ce9.html">GOROGOA-精华，你的成果如何</a>
+      </h1>
 
-      <a href="/archives/ff412ce9.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/ff412ce9.html">
           
-        
-        <div>说在前面我是怀着激动的心情来写这篇文章的。我如何定义一部作品是否优秀？很简单。它能达到它的目的，它和优秀沾上边了。就像搞笑视频逗笑你，治愈视频使人放松，致郁视频让你流泪。而这是一部富有哲理的优秀作品。</div>
-      </a>
+          
+            
+          
+          说在前面我是怀着激动的心情来写这篇文章的。我如何定义一部作品是否优秀？很简单。它能达到它的目的，它和优秀沾上边了。就像搞笑视频逗笑你，治愈视频使人放松，致郁视频让你流泪。而这是一部富有哲理的优秀作品。
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2019-10-25
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-25 22:30" pubdate>
+              2019-10-25
+            </time>
           </div>
         
         
@@ -396,28 +444,35 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/c3498269.html">声明</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/c3498269.html">声明</a>
+      </h1>
 
-      <a href="/archives/c3498269.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/c3498269.html">
           
-        
-        <div>本博客不愿也不会发布任何有关政治的文章。我也不想我的手机和电脑被任何人检查。
-</div>
-      </a>
+          
+            
+          
+          本博客不愿也不会发布任何有关政治的文章。我也不想我的手机和电脑被任何人检查。
+
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2019-10-24
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-24 22:30" pubdate>
+              2019-10-24
+            </time>
           </div>
         
         
@@ -430,27 +485,34 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/27f2d840.html">iPv6下绝佳的DDNS方法-dynv6</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/27f2d840.html">iPv6下绝佳的DDNS方法-dynv6</a>
+      </h1>
 
-      <a href="/archives/27f2d840.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/27f2d840.html">
           
-        
-        <div>下面Lao_Liu介绍一种适用于iPv6-DDNS的绝佳方法！</div>
-      </a>
+          
+            
+          
+          下面Lao_Liu介绍一种适用于iPv6-DDNS的绝佳方法！
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2019-10-03
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-03 23:30" pubdate>
+              2019-10-03
+            </time>
           </div>
         
         
@@ -470,28 +532,35 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/a4c81e8f.html">搭建Calibre-Web电子书网页端管理服务</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/a4c81e8f.html">搭建Calibre-Web电子书网页端管理服务</a>
+      </h1>
 
-      <a href="/archives/a4c81e8f.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/a4c81e8f.html">
           
-        
-        <div>说在前面Kindle是一样阅读利器，但若是没有一个强大的书库，它也只能用来压泡面（笑）
-今天我们利用docker在群晖（任意系统）上搭建Calibre-web服务</div>
-      </a>
+          
+            
+          
+          说在前面Kindle是一样阅读利器，但若是没有一个强大的书库，它也只能用来压泡面（笑）
+今天我们利用docker在群晖（任意系统）上搭建Calibre-web服务
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2019-10-02
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-10-02 18:30" pubdate>
+              2019-10-02
+            </time>
           </div>
         
         
@@ -511,27 +580,34 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
   <div class="row mx-auto index-card">
     
     
-    <div class="col-12 col-md-12 mx-auto index-info">
-      <a class="index-header" href="/archives/8ca2a7b3.html">秒知APP消息发送教程</a>
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        <a href="/archives/8ca2a7b3.html">秒知APP消息发送教程</a>
+      </h1>
 
-      <a href="/archives/8ca2a7b3.html" class="index-excerpt">
-        
-        
+      <p class="index-excerpt">
+        <a href="/archives/8ca2a7b3.html">
           
-        
-        <div>这是秒知APP的主界面</div>
-      </a>
+          
+            
+          
+          这是秒知APP的主界面
+        </a>
+      </p>
 
       <div class="index-btm post-metas">
         
           <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>&nbsp;2019-09-22
+            <i class="iconfont icon-date"></i>
+            <time datetime="2019-09-22 08:00" pubdate>
+              2019-09-22
+            </time>
           </div>
         
         
@@ -544,7 +620,7 @@
           </div>
         
       </div>
-    </div>
+    </article>
   </div>
 
 
@@ -698,5 +774,5 @@
 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/seyana.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"log":false});</script></body>
+</body>
 </html>

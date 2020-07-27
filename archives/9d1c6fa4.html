@@ -1,7 +1,7 @@
+
+
 <!DOCTYPE html>
-<html lang="zh-hans">
-
-
+<html lang="zh-hans" data-default-color-scheme="&#34;auto&#34;">
 
 
 
@@ -33,7 +33,7 @@
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
-<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_yg9cfy8wd6.css">
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_6peoq002giu.css">
 
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_pjno9b9zyxs.css">
 
@@ -43,6 +43,7 @@
 
 
   <script src="/js/utils.js"></script>
+  <script src="/js/color-schema.js"></script>
 </head>
 
 
@@ -122,7 +123,12 @@
         
         
           <li class="nav-item" id="search-btn">
-            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;&nbsp;<i class="iconfont icon-search"></i>&nbsp;&nbsp;</a>
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
           </li>
         
       </ul>
@@ -134,7 +140,7 @@
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container text-center white-text fade-in-up">
+          <div class="container page-header text-center fade-in-up">
             <span class="h2" id="subtitle">
               
             </span>
@@ -143,7 +149,7 @@
               
   <div class="mt-3 post-meta">
     <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-    <time datetime="2020-01-06 18:00">
+    <time datetime="2020-01-06 18:00" pubdate>
       January 6, 2020 pm
     </time>
   </div>
@@ -192,9 +198,11 @@
     <div class="col-lg-8 nopadding-md">
       <div class="container nopadding-md" id="board-ctn">
         <div class="py-5" id="board">
-          <div class="post-content mx-auto" id="post">
+          <article class="post-content mx-auto" id="post">
+            <!-- SEO header -->
+            <h1 style="display: none">Joplin+Webdav同步问题的解决方案</h1>
             
-            <article class="markdown-body">
+            <div class="markdown-body" id="post-body">
               <h2 id="问题内容"><a href="#问题内容" class="headerlink" title="问题内容"></a>问题内容</h2><p>在群晖上搭建了Webdav服务器，使用Joplin连接后无法同步笔记。</p>
 <a id="more"></a> 
 
@@ -208,7 +216,7 @@
 <p>结合抓包结果和Joplin同步日志可以看到Joplin在“/ ”目录下查找了.lock等文件。结合其他Webdav软件可以看到访问的URL指向的是目标文件夹，即“域名：端口/目标文件夹”，由此推测需要在配置内为Joplin指明同步目录，否则将在没有权限的根目录下同步，导致失败。</p>
 <p>这是一次没有什么技术含量但能启发我的尝试。若你也遇到了类似的问题，希望也能启发到你。</p>
 
-            </article>
+            </div>
             <hr>
             <div>
               <div class="post-metas mb-3">
@@ -234,7 +242,7 @@
               
               
                 <div class="post-prevnext row">
-                  <div class="post-prev col-6">
+                  <article class="post-prev col-6">
                     
                     
                       <a href="/archives/e3c95af8.html">
@@ -243,8 +251,8 @@
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
-                  </div>
-                  <div class="post-next col-6">
+                  </article>
+                  <article class="post-next col-6">
                     
                     
                       <a href="/archives/c7a0a8db.html">
@@ -253,14 +261,14 @@
                         <i class="iconfont icon-arrowright"></i>
                       </a>
                     
-                  </div>
+                  </article>
                 </div>
               
             </div>
 
             
               <!-- Comments -->
-              <div class="comments" id="comments">
+              <article class="comments" id="comments">
                 
                 
   <div class="disqus" style="width:100%">
@@ -275,7 +283,7 @@
           });
         });
       }
-      createObserver(loadDisqus, 'disqus_thread');
+      waitElementVisible(loadDisqus, 'disqus_thread');
     </script>
     <noscript>Please enable JavaScript to view the
       <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a>
@@ -283,9 +291,9 @@
   </div>
 
 
-              </div>
+              </article>
             
-          </div>
+          </article>
         </div>
       </div>
     </div>
@@ -387,7 +395,7 @@
 
       tocbot.init({
         tocSelector: '#tocbot',
-        contentSelector: 'article.markdown-body',
+        contentSelector: '#post-body',
         headingSelector: 'h1,h2,h3,h4,h5,h6',
         linkClass: 'tocbot-link',
         activeLinkClass: 'tocbot-active-link',
@@ -488,5 +496,5 @@
 
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/seyana.model.json"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"log":false});</script></body>
+</body>
 </html>
