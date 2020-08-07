@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2020-06-07T14:21:32.054Z</updated>
+  <updated>2020-08-07T03:55:15.311Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>逃离国产软件 - 虚拟机计划</title>
+    <link href="https://blog.laoliu.eu.org/archives/a455b52c.html"/>
+    <id>https://blog.laoliu.eu.org/archives/a455b52c.html</id>
+    <published>2020-08-07T04:30:00.000Z</published>
+    <updated>2020-08-07T03:55:15.311Z</updated>
+    
+    <summary type="html">
+    
+      使用 Hyper-V 运行 Windows LTSC 虚拟机，以隔离流氓的国产软件们。
+    
+    </summary>
+    
+      <category term="教程 软件" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B-%E8%BD%AF%E4%BB%B6/"/>
+    
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="软件" scheme="https://blog.laoliu.eu.org/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>提升音乐体验-本地音乐标签/歌词匹配与回放增益</title>
@@ -132,6 +154,24 @@
     </summary>
     
       <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>声明</title>
+    <link href="https://blog.laoliu.eu.org/archives/c3498269.html"/>
+    <id>https://blog.laoliu.eu.org/archives/c3498269.html</id>
+    <published>2019-10-24T14:30:00.000Z</published>
+    <updated>2020-07-30T12:06:19.062Z</updated>
+    
+    <summary type="html">
+    
+      声明。
+    
+    </summary>
     
     
       <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>

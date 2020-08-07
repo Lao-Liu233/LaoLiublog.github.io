@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>逃离国产软件 - 虚拟机计划</title>
+    <link href="/archives/a455b52c.html"/>
+    <url>/archives/a455b52c.html</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>使用 Hyper-V 运行 Windows LTSC 虚拟机，以隔离流氓的国产软件们。</p><h3 id="为何大费周章？"><a href="#为何大费周章？" class="headerlink" title="为何大费周章？"></a>为何大费周章？</h3><p>Lao_Liu 试过网络上的不少方法来隔离鹅厂的软件 —— 刚开源的 Sandboxie 也好，利用 Windows ACL 机制通过低权账户加以限制也好 —— 都因为权限问题失败了。最后决定用虚拟环境直接隔离这些软件。</p><a id="more"></a><h3 id="为什么是-Hyper-V-和-LTSC？"><a href="#为什么是-Hyper-V-和-LTSC？" class="headerlink" title="为什么是 Hyper-V 和 LTSC？"></a>为什么是 Hyper-V 和 LTSC？</h3><p>Lao_Liu 用过 VMWare，觉得还是 Windows 原生的 Hyper-V 启动最快。还不用钱。</p><p>Windows LTSC 是企业定制版，官方精简了系统，性能开销更少。</p><h3 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h3><p>拥有 16G 以上内存及 NVME 高速硬盘的用户可以放心采用该方案，虚拟机运行时不会影响其他软件的流畅运行。</p><h4 id="下载-MSDN-上的-Windows-LTSC"><a href="#下载-MSDN-上的-Windows-LTSC" class="headerlink" title="下载 MSDN 上的 Windows LTSC:"></a>下载 <a href="https://msdn.itellyou.cn/" rel="external nofollow noopener noreferrer" target="_blank">MSDN</a> 上的 Windows LTSC:</h4><p>侧边栏选择 <strong>操作系统</strong> ；选择 <strong>Windows 10 Enterprise LTSC 2019</strong>。</p><h4 id="安装-Hyper-V："><a href="#安装-Hyper-V：" class="headerlink" title="安装 Hyper-V："></a>安装 Hyper-V：</h4><p>对于 Windows 专业版 用户，在 控制面板 - 程序与功能 - 启动或关闭Windows功能 中找到 <strong>Hyper-V</strong> 并打开。</p><p>对于 其他版本 Windows 的用户，则稍微有些麻烦：</p><ol><li>在记事本中输入如下代码</li></ol><pre><code class="hljs undefined">pushd <span class="hljs-string">"%~dp0"</span>dir <span class="hljs-string">/b</span> %SystemRoot%\servicing\Packages\*Hyper-V*<span class="hljs-string">.mum</span> &gt;hyper-v.txtfor <span class="hljs-string">/f</span> %%i in <span class="hljs-params">('findstr /i . hyper-v.txt 2^&gt;nul')</span> do dism <span class="hljs-string">/online</span> <span class="hljs-string">/norestart</span> <span class="hljs-string">/add-package</span>:<span class="hljs-string">"%SystemRoot%\servicing\Packages\%%i"</span>del hyper-v.txtDism <span class="hljs-string">/online</span> <span class="hljs-string">/enable-feature</span> <span class="hljs-string">/featurename</span><span class="hljs-function">:Microsoft-Hyper-V-All</span> <span class="hljs-string">/LimitAccess</span> <span class="hljs-string">/ALL</span></code></pre><ol start="2"><li>把文件保存为Hyper-V.cmd</li><li>右键该文件，选择 <strong>以管理员身份运行</strong></li></ol><p>根据提示完成安装。</p><blockquote><p>摘自知乎 <a href="https://zhuanlan.zhihu.com/p/51939654" rel="external nofollow noopener noreferrer" target="_blank">没人不认识我</a> 的回答</p></blockquote><h3 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h3><p>打开 Hyper-V ，选择 <strong>新建 - 虚拟机</strong> ；</p><p>根据向导提示设置虚拟机，选择 <strong>第一代虚拟机</strong> ；</p><p>内存分配我选了 2G （共16G）；CPU 分配我选了 4线程 （共12线程）【需要完成配置后在 <strong>设置</strong> 中更改】；</p><p>其余设置默认或自定；</p><p>安装选项选择 <strong>从 CD/DVD-ROM 安装操作系统</strong> ，选择刚刚下载好的 Windows LTSC ISO镜像；</p><p>完成配置后，启动虚拟机，安装 Windows LTSC 到硬盘。</p><h3 id="配置环境"><a href="#配置环境" class="headerlink" title="配置环境"></a>配置环境</h3><p>装好系统后要干什么不用我说了吧。</p><p>把垃圾们倒进去就好啦。</p><p>实测空载消耗 CPU 算力在 0%-3% 浮动；内存占用 2.2G，实际使用 1.2G 。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>教程 软件</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>教程</tag>
+      
+      <tag>软件</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>提升音乐体验-本地音乐标签/歌词匹配与回放增益</title>
     <link href="/archives/6b40e5ad.html"/>
     <url>/archives/6b40e5ad.html</url>
@@ -110,7 +137,7 @@
     <link href="/archives/c7a0a8db.html"/>
     <url>/archives/c7a0a8db.html</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>有幸在<a href="https://t.me/rynif_music" rel="external nofollow noopener noreferrer" target="_blank">/home/rynco/music</a> Channel遇见这张专辑。第一次听，或许是风格合口，我立刻爱上了这首名为“Laika Still Wants Go Home”，与专辑同名的轻音乐。<br>很有力量。这是这张专辑给我的第一印象。<br>我几乎没有乐理知识，对于音乐的评论总是如此无力。这首歌从旋律看也好，从节奏看也好，感觉整体把控得很恰当，张弛有度。我贫瘠的语言真的无法形容那种美的感觉。</p><a id="more"></a><hr>        <div id="aplayer-aoGrXNQl" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-aoGrXNQl"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "Laika Still Wants Go Home",              author: "Powder! Go Away",              url: "https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/music/Laika_Still_Wants_Go_Home.mp3",              pic: "https://p2.music.126.net/KFmivwKj3h18NGYKJlYcsw==/3229265650821776.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>我刷新了对这张专辑的认识，已是数十分钟后。我在听新曲时总会翻翻网易云音乐的评论区，有数条评论对专辑封面的解释。<br><img src="http://p2.music.126.net/KFmivwKj3h18NGYKJlYcsw==/3229265650821776.jpg" srcset="/img/loading.gif" alt><br>我第一次听说太空犬这个词是在Littile Buster中，能美·库特莉亚芙卡的名字的由来。库特莉亚芙卡是一头太空犬的本名。<br>它常被我们称作：莱卡。</p><hr><p>鉴于很少人知道这个故事，我就讲讲吧。<br>当时正逢美苏争霸，太空竞赛也是美苏交锋的重点。当时的苏联宇航技术不是很发达，但想要胜过美国就要先把航天员送上天。总不能让宇航员乘着从未试验过的飞船就这么上去吧，苏联的科学家就想用动物代替人类完成测试。科学家们在街上找来了几条流浪狗——因为他们觉得流浪狗比家犬够能受冻——这几条狗就被钦定为太空犬了。训练的艰苦不必多说，看看训练人类就能明白，何况是动物。几个月的训练之后，莱卡脱颖而出。到了发射前几天，一位科学家把莱卡带回了家里，让它和孩子们玩耍，因为他们很清楚，这是一次不含回程票的旅行。<br>苏联当时并未掌握从地球轨道重返地面的技术。<br>不知道当时在场的所有人的心情是怎样的。应该是兴奋的，毕竟超越老美了；又有点担心，因为即将发射的飞船是赫鲁晓夫下令两周内造出来的；或许有的人会有些不舍吧，他们将要亲手送走一条鲜活的生命。<br>很可惜，莱卡并不是在氧气或食物耗尽前被安乐死的。飞船的温控系统因赶工与设计问题出现故障。即使风扇再怎样转，舱内俨然成为一个火炉。用好听的话说莱卡是中暑而死；难听点，活活热死。仅管死亡是不可避免的，我也希望它能少一点痛苦啊。</p><hr><p>我想到了安德。在指挥完舰队完成模拟战斗后，在他得知他亲手消灭了虫族的舰队时，他崩溃了。他回忆起刚才他指挥数个小队作为诱饵白白牺牲。他崩溃了。我想当时，我也希望当时，火箭点火升空之时，二级火箭脱离失败之时，舱内温度急剧升高之时，有人能为这条生命感到一丝绝望。</p><hr><p>这张专辑的风格与“OPUS-灵魂之桥”的OST有异曲同工之妙。（独立工作室的游戏，OST不方便放出，希望大家能一起购买。游戏也很棒啊！）都给我以一种末世感。究竟是世界对人绝望还是人对世界绝望呢？</p><hr><p>想象你站在专辑封面的那一点上，眺望地球，这该是多么孤独与悲伤。有评论说载着莱卡的火箭现在仍绕着地球旋转，但很可惜，那台火箭已经在大气层燃尽，这也算是最高规格的葬礼了吧。</p><hr><p>再说说专辑的名称吧。“Laika Still Wants Go Home”，英文，是没有一点问题的。我的母语是中文，因此英文的名称对我无感。但当我要将它翻译成中文，那一刻，我真的愣住了。我脑袋里已经将这几个单词转化为了中文，再一次理解了它们的意思。我僵住了。就几个字停留在嘴边就是说不出来。说不出来……在对面的人疑惑不解我为何停住，思考是否因为自己没有在认真听导致我生气时，一滴眼泪从我疲惫的左眼划过。立刻调动理智。情绪再次平稳，我又调回了内存里的那几个字，念了出来……</p><hr><p>后记</p><p>从听到这首歌到构思这篇文章再到陆陆续续写出来，我花了数天。因为事情真的很多，脑内的一些想法被琐事代换了。<br>文字很凌乱，几乎是想到什么写什么。因此我用分割线分开了。<br>若有新想法我会继续补充的。</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>有幸在<a href="https://t.me/rynif_music" rel="external nofollow noopener noreferrer" target="_blank">/home/rynco/music</a> Channel遇见这张专辑。第一次听，或许是风格合口，我立刻爱上了这首名为“Laika Still Wants Go Home”，与专辑同名的轻音乐。<br>很有力量。这是这张专辑给我的第一印象。<br>我几乎没有乐理知识，对于音乐的评论总是如此无力。这首歌从旋律看也好，从节奏看也好，感觉整体把控得很恰当，张弛有度。我贫瘠的语言真的无法形容那种美的感觉。</p><a id="more"></a><hr>        <div id="aplayer-vBrnvlhV" class="aplayer aplayer-tag-marker" style="margin-bottom: 20px;">            <pre class="aplayer-lrc-content"></pre>        </div>        <script>          var ap = new APlayer({            element: document.getElementById("aplayer-vBrnvlhV"),            narrow: false,            autoplay: false,            showlrc: false,            music: {              title: "Laika Still Wants Go Home",              author: "Powder! Go Away",              url: "https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/music/Laika_Still_Wants_Go_Home.mp3",              pic: "https://p2.music.126.net/KFmivwKj3h18NGYKJlYcsw==/3229265650821776.jpg",              lrc: ""            }          });          window.aplayers || (window.aplayers = []);          window.aplayers.push(ap);        </script><p>我刷新了对这张专辑的认识，已是数十分钟后。我在听新曲时总会翻翻网易云音乐的评论区，有数条评论对专辑封面的解释。<br><img src="http://p2.music.126.net/KFmivwKj3h18NGYKJlYcsw==/3229265650821776.jpg" srcset="/img/loading.gif" alt><br>我第一次听说太空犬这个词是在Littile Buster中，能美·库特莉亚芙卡的名字的由来。库特莉亚芙卡是一头太空犬的本名。<br>它常被我们称作：莱卡。</p><hr><p>鉴于很少人知道这个故事，我就讲讲吧。<br>当时正逢美苏争霸，太空竞赛也是美苏交锋的重点。当时的苏联宇航技术不是很发达，但想要胜过美国就要先把航天员送上天。总不能让宇航员乘着从未试验过的飞船就这么上去吧，苏联的科学家就想用动物代替人类完成测试。科学家们在街上找来了几条流浪狗——因为他们觉得流浪狗比家犬够能受冻——这几条狗就被钦定为太空犬了。训练的艰苦不必多说，看看训练人类就能明白，何况是动物。几个月的训练之后，莱卡脱颖而出。到了发射前几天，一位科学家把莱卡带回了家里，让它和孩子们玩耍，因为他们很清楚，这是一次不含回程票的旅行。<br>苏联当时并未掌握从地球轨道重返地面的技术。<br>不知道当时在场的所有人的心情是怎样的。应该是兴奋的，毕竟超越老美了；又有点担心，因为即将发射的飞船是赫鲁晓夫下令两周内造出来的；或许有的人会有些不舍吧，他们将要亲手送走一条鲜活的生命。<br>很可惜，莱卡并不是在氧气或食物耗尽前被安乐死的。飞船的温控系统因赶工与设计问题出现故障。即使风扇再怎样转，舱内俨然成为一个火炉。用好听的话说莱卡是中暑而死；难听点，活活热死。仅管死亡是不可避免的，我也希望它能少一点痛苦啊。</p><hr><p>我想到了安德。在指挥完舰队完成模拟战斗后，在他得知他亲手消灭了虫族的舰队时，他崩溃了。他回忆起刚才他指挥数个小队作为诱饵白白牺牲。他崩溃了。我想当时，我也希望当时，火箭点火升空之时，二级火箭脱离失败之时，舱内温度急剧升高之时，有人能为这条生命感到一丝绝望。</p><hr><p>这张专辑的风格与“OPUS-灵魂之桥”的OST有异曲同工之妙。（独立工作室的游戏，OST不方便放出，希望大家能一起购买。游戏也很棒啊！）都给我以一种末世感。究竟是世界对人绝望还是人对世界绝望呢？</p><hr><p>想象你站在专辑封面的那一点上，眺望地球，这该是多么孤独与悲伤。有评论说载着莱卡的火箭现在仍绕着地球旋转，但很可惜，那台火箭已经在大气层燃尽，这也算是最高规格的葬礼了吧。</p><hr><p>再说说专辑的名称吧。“Laika Still Wants Go Home”，英文，是没有一点问题的。我的母语是中文，因此英文的名称对我无感。但当我要将它翻译成中文，那一刻，我真的愣住了。我脑袋里已经将这几个单词转化为了中文，再一次理解了它们的意思。我僵住了。就几个字停留在嘴边就是说不出来。说不出来……在对面的人疑惑不解我为何停住，思考是否因为自己没有在认真听导致我生气时，一滴眼泪从我疲惫的左眼划过。立刻调动理智。情绪再次平稳，我又调回了内存里的那几个字，念了出来……</p><hr><p>后记</p><p>从听到这首歌到构思这篇文章再到陆陆续续写出来，我花了数天。因为事情真的很多，脑内的一些想法被琐事代换了。<br>文字很凌乱，几乎是想到什么写什么。因此我用分割线分开了。<br>若有新想法我会继续补充的。</p>]]></content>
     
     
     <categories>
@@ -143,6 +170,25 @@
       <category>随笔</category>
       
     </categories>
+    
+    
+    <tags>
+      
+      <tag>随笔</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>声明</title>
+    <link href="/archives/c3498269.html"/>
+    <url>/archives/c3498269.html</url>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong>本博客不愿也不会发布任何有关政治的文章。我也不想我的手机和电脑被任何人检查。</strong></p>]]></content>
+    
     
     
     <tags>
