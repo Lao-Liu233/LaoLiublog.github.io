@@ -14,6 +14,11 @@
 .banner .page-header {
   color: #fff;
 }
+.banner[parallax="true"] {
+  will-change: transform;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
 #board {
   position: relative;
   margin-top: -2rem;
@@ -193,11 +198,6 @@ sup > a::before,
   font-size: 1.75rem;
   margin: auto;
   color: var(--sec-text-color);
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
 }
 #scroll-top-button:hover i,
 #scroll-top-button:active i {
@@ -665,12 +665,15 @@ img[srcset] {
   border-width: 0;
   outline: 0;
 }
+.navbar.scrolling-navbar {
+  will-change: background, padding;
+  -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
+}
 @media (min-width: 600px) {
   .navbar.scrolling-navbar {
     padding-top: 12px;
     padding-bottom: 12px;
-    -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
-    transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
   .navbar.scrolling-navbar .navbar-nav > li {
     -webkit-transition-duration: 1s;
@@ -1079,6 +1082,12 @@ input[type=checkbox]:checked:after {
   color: var(--text-color) !important;
   transition: color 0.2s ease-in-out;
 }
+#remark-km423lmfdslkm34-back {
+  z-index: 1030;
+}
+#remark-km423lmfdslkm34-node {
+  z-index: 1031;
+}
 .index-card {
   margin-bottom: 2.5rem;
 }
@@ -1201,11 +1210,6 @@ post-content strong {
 .post-prevnext .post-prev i,
 .post-prevnext .post-next i {
   font-size: 1.5rem;
-  -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
 }
 .post-prevnext .post-prev a,
 .post-prevnext .post-next a {
