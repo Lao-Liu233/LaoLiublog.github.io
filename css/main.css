@@ -73,7 +73,7 @@
 .markdown-body pre:not(:hover) > .copy-btn {
   outline: none;
 }
-footer > div > div:not(:first-child) {
+footer > div:not(:first-child) {
   margin: 0.25rem 0;
   font-size: 0.85rem;
 }
@@ -149,12 +149,13 @@ sup > a::before,
   transition: all 0.3s;
 }
 .qr-img {
-  max-width: 200px;
+  max-width: 12rem;
   position: absolute;
-  right: -100px;
+  right: -5.25rem;
   z-index: 99;
   display: none;
   box-shadow: 0 0 20px -5px rgba(158,158,158,0.2);
+  border-radius: 0.2rem;
 }
 .scroll-down-bar {
   position: absolute;
@@ -1115,6 +1116,11 @@ input[type=checkbox]:checked:after {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.index-header .index-pin {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  margin-right: 0.15rem;
+}
 .index-btm {
   color: var(--sec-text-color);
 }
@@ -1149,6 +1155,9 @@ input[type=checkbox]:checked:after {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+  }
+  .index-header .index-pin {
+    font-size: 1.25rem;
   }
 }
 .post-content {
