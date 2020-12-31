@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2020-08-07T05:03:51.775Z</updated>
+  <updated>2020-12-31T15:32:06.229Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020 年终总结</title>
+    <link href="https://blog.laoliu.eu.org/archives/cd7dffda.html"/>
+    <id>https://blog.laoliu.eu.org/archives/cd7dffda.html</id>
+    <published>2020-12-31T16:00:00.000Z</published>
+    <updated>2020-12-31T15:32:06.229Z</updated>
+    
+    <summary type="html">
+    
+      年终总结。
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>逃离国产软件 - 虚拟机计划</title>

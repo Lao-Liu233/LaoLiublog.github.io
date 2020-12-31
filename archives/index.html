@@ -18,7 +18,7 @@
   <meta name="keywords" content="no">
   <title>Archiv - Lao_Liu Blog</title>
 
-  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
 
 
@@ -32,6 +32,10 @@
 <!-- 自定义样式保持在最底部 -->
 
 
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"blog.laoliu.eu.org","root":"/","version":"1.8.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
+  </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
 </head>
@@ -126,12 +130,12 @@
   </div>
 </nav>
 
-    <div class="banner intro-2" id="background" parallax="true" style="background: url('https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/banner_img/404.jpg') no-repeat center center;
+    <div class="banner" id="banner" parallax="true" style="background: url('https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/banner_img/404.jpg') no-repeat center center;
            background-size: cover;">
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-          <div class="container page-header text-center fade-in-up">
-            <span class="h2" id="subtitle">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="Archiv">
               
             </span>
 
@@ -146,7 +150,7 @@
 
   <main>
     
-      <div class="container nopadding-md">
+      <div class="container nopadding-x-md">
         <div class="py-5" id="board">
           
           <div class="container">
@@ -155,8 +159,18 @@
                 
 
 <div class="list-group">
-  <p class="h4">Insgesamt 16 Artikel.</p>
+  <p class="h4">Insgesamt 17 Artikel.</p>
   <hr>
+  
+  
+    
+      
+      <p class="h5">2021</p>
+    
+    <a href="/archives/cd7dffda.html" class="list-group-item list-group-item-action">
+      <span class="archive-post-title">2020 年终总结</span>
+      <time style="float: right;">01-01</time>
+    </a>
   
     
       
@@ -218,13 +232,8 @@
       <time style="float: right;">10-03</time>
     </a>
   
-    
-    <a href="/archives/a4c81e8f.html" class="list-group-item list-group-item-action">
-      <span class="archive-post-title">搭建Calibre-Web电子书网页端管理服务</span>
-      <time style="float: right;">10-02</time>
-    </a>
-  
 </div>
+
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
@@ -240,22 +249,22 @@
 
 
 
+
               </div>
             </div>
           </div>
         </div>
       </div>
     
-  </main>
 
-  
-    <a id="scroll-top-button" href="#" role="button">
-      <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-    </a>
-  
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-  
-    <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header text-center">
@@ -274,9 +283,10 @@
     </div>
   </div>
 </div>
-  
+    
 
-  
+    
+  </main>
 
   <footer class="text-center mt-5 py-3">
   <div class="footer-content">
@@ -290,10 +300,24 @@
 </footer>
 
 <!-- SCRIPTS -->
-<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdn.staticfile.org/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"></script>
 <script src="/js/debouncer.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/events.js"></script>
+<script src="/js/plugins.js"></script>
 
 <!-- Plugins -->
 
@@ -308,47 +332,42 @@
 
 
 
-  <script defer src="https://cdn.staticfile.org/clipboard.js/2.0.6/clipboard.min.js"></script>
-  <script src="/js/clipboard-use.js"></script>
 
 
 
 
 
 
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 
 
 
-  <script src="https://cdn.staticfile.org/typed.js/2.0.11/typed.min.js"></script>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
   <script>
-    var typed = new Typed('#subtitle', {
-      strings: [
-        '  ',
-        "Archiv&nbsp;",
-      ],
-      cursorChar: "_",
-      typeSpeed: 70,
-      loop: false,
-    });
-    typed.stop();
-    $(document).ready(function () {
-      $(".typed-cursor").addClass("h2");
-      typed.start();
-    });
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
   </script>
-
-
 
 
 
   <script src="/js/local-search.js"></script>
   <script>
-    var path = "/local-search.xml";
-    var inputArea = document.querySelector("#local-search-input");
-    inputArea.onclick = function () {
-      searchFunc(path, 'local-search-input', 'local-search-result');
-      this.onclick = null
-    }
+    (function () {
+      var path = "/local-search.xml";
+      var inputArea = document.querySelector("#local-search-input");
+      inputArea.onclick = function () {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+        this.onclick = null
+      }
+    })()
   </script>
 
 
@@ -364,6 +383,9 @@
 
 
 
+
+<!-- 主题的启动项 保持在最底部 -->
+<script src="/js/boot.js"></script>
 
 
 
