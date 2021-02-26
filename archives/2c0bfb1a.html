@@ -14,12 +14,12 @@
   
   <meta name="theme-color" content="#2f4154">
   
-    <meta name="description" content="博客迁移-主题更换与近况报告">
+    <meta name="description" content="分享一下初次校色的体验以及寒假我都干了些什么。">
   
   <meta name="author" content="Lao_Liu">
   <meta name="keywords" content="no">
   
-  <title>博客迁移-主题更换与近况报告 - Lao_Liu Blog</title>
+  <title>校色初体验 / 寒假总结 - Lao_Liu Blog</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
@@ -154,7 +154,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="博客迁移-主题更换与近况报告">
+            <span class="h2" id="subtitle" title="校色初体验 / 寒假总结">
               
             </span>
 
@@ -164,8 +164,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2020-05-04 09:58" pubdate>
-        2020年5月4日 上午
+      <time datetime="2021-02-26 22:00" pubdate>
+        2021年2月26日 晚上
       </time>
     </span>
   
@@ -176,7 +176,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      737 字
+      680 字
     </span>
   
 
@@ -216,55 +216,40 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">博客迁移-主题更换与近况报告</h1>
+            <h1 style="display: none">校色初体验 / 寒假总结</h1>
             
             <div class="markdown-body">
-              <p>又好久不见。</p>
-<p>这两天抽空更换了博客的主题，并迁移至永久域名 blog.laoliu.eu.org 。</p>
-<p>以及谈一谈新开的项目的设计思路，有兴趣的读者还请慢慢阅读。</p>
-<a id="more"></a> 
+              <p>好久不见，甚是想念。今天来分享一下初次校色的体验以及寒假我都干了些什么。</p>
+<a id="more"></a>
 
-<h2 id="博客变更"><a href="#博客变更" class="headerlink" title="博客变更"></a>博客变更</h2><h3 id="更换域名"><a href="#更换域名" class="headerlink" title="更换域名"></a>更换域名</h3><p>将博客迁移至 <a href="https://blog.laoliu.eu.org">https://blog.laoliu.eu.org</a> 这一永久域名。</p>
-<h3 id="更换-Hexo-主题"><a href="#更换-Hexo-主题" class="headerlink" title="更换 Hexo 主题"></a>更换 Hexo 主题</h3><p>主题的名字叫 <a href="https://github.com/fluid-dev/hexo-theme-fluid" rel="external nofollow noopener noreferrer" target="_blank">Fluid</a> ，是一款 Material Design 风格的主题。</p>
-<p>之前我用的主题是 Yilia ，但作者弃坑已久，感觉已跟不上时代变化，就下定决心换了（还把手上所有猫羽雫图全部塞进去了）。</p>
-<p>同时，我还将评论系统 Gitalk 更换为 <a href="https://utteranc.es/" rel="external nofollow noopener noreferrer" target="_blank">utteranc</a> ，对于国内用户加载速度应该会更快，同样需要 GitHub 登录。</p>
-<h2 id="近况报告"><a href="#近况报告" class="headerlink" title="近况报告"></a>近况报告</h2><p>快要高考了好忙啊，完全没有时间研究技术了，也到了应该要努力的时候了（笑）。</p>
-<p>超级长的寒假里我还是有学习新知识的（指计算机）：</p>
-<h3 id="成绩查询网站"><a href="#成绩查询网站" class="headerlink" title="成绩查询网站"></a>成绩查询网站</h3><p>开了一个坑：构建一个成绩查询网站以代替学校那套繁琐的校务系统。</p>
-<p>项目地址：<a href="https://github.com/Lao-Liu233/FZYZ_JK_Grades" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/Lao-Liu233/FZYZ_JK_Grades</a></p>
-<p>项目的前端用了 jQuery、Bootstrap 等框架；</p>
-<p>后端则是采用我比较熟悉的 Python 后端框架 Django 。</p>
 <hr>
-<p>校园官网查询成绩的流程如下：</p>
-<pre><code class=" mermaid">graph TB
-校园网主页--输入账号密码 选择身份--&gt;
-校园网内网--找到侧边栏的按钮--&gt;
-成绩查询页面--选择年份 学期 考试场次--&gt;
-得到成绩
-</code></pre>
-
-<p>如何取代学校的系统呢？思路很简单：<del>黑掉学校的服务器直接把成绩取出来</del></p>
-<p>模拟登录就好了。</p>
-<p>学校的破烂网站采用的是最简单的 GET 表单登录，可以轻松获取 Cookie ，方便进一步操作；</p>
-<p>我将查询步骤简化为：</p>
-<pre><code class=" mermaid">graph TB
-查询页面--输入账号密码--&gt;
-下一步1--选择年份 学期--&gt;
-下一步2--选择考试场次--&gt;
-获得成绩
-</code></pre>
-
-<p>看起来没简化多少，其实 选择身份 和 找到侧边栏按钮 就已经足够烦人了。</p>
-<p>校园网采用了大量下拉框选择，我将其替换为按钮选择，甚至不用选择，一定程度上提高了查询效率。</p>
+<h2 id="校色初体验"><a href="#校色初体验" class="headerlink" title="校色初体验"></a>校色初体验</h2><h3 id="为什么要校色"><a href="#为什么要校色" class="headerlink" title="为什么要校色"></a>为什么要校色</h3><p>我的笔记本电脑型号是 联想小新 air 14 2020，拥有一块 14寸 100% sRGB 色域（实际为 94% sRGB）的屏幕，面板型号是 友达 B140HAN06.8。很幸运，不仅抽中了三星 SSD，还抽中了友达的屏幕。</p>
+<p>为了更舒服地阅读代码，我又淘了一台 17.3寸 的 DIY 便携显示器，同样也是 100% sRGB 色域（实际为 95% sRGB），面板型号是 友达 B173han01.1。</p>
+<p>由于便携屏的驱动板都是通用的，并没有对某块面板有调教，也不可能有屏幕出厂时的调教，因此这块便携屏的色差非常明显。就校色结果来看，光度(gamma)值就有 70% 左右的偏差。</p>
+<p>通过校色，两块屏幕色彩更加接近，且更接近真实的颜色，看起来也会更舒服一些。</p>
+<h3 id="关于价格"><a href="#关于价格" class="headerlink" title="关于价格"></a>关于价格</h3><p>我想很多人和我有同样的顾虑，感觉租用校色仪价格不菲。</p>
+<p>这次租用时长为 3天，我仅使用了一天半就归还了。总共支出为 校色仪租金 40元 + 回程运费 18元。押金原本是 750元，和店家商量后爽快地降到了 500元。</p>
+<p>虽然商家划定了许多可能导致押金被扣的规则，但只要你小心一点、爱护一点，完璧归赵、取回押金是很简单的。</p>
+<h3 id="色温选择"><a href="#色温选择" class="headerlink" title="色温选择"></a>色温选择</h3><p>刚开始我选择的目标色温是 6500K，在校色后发现偏黄许多。最后我选择的目标色温是 7500K。当然，两块屏幕 6500K 色温的校色文件我都保存下来了。</p>
+<h3 id="最终校色效果"><a href="#最终校色效果" class="headerlink" title="最终校色效果"></a>最终校色效果</h3><p>按照红蜘蛛给出的报告，联想笔记本的这块屏幕在色准上要优于便携屏，白点与灰度的 △E &lt;= 0.2 ，便携屏则是 △E &lt;= 0.5。</p>
+<p>联想这块屏出厂也比较准，值得表扬~</p>
+<p>下面是校色完的合影：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs@0.0.21/2021-2-26/1.jpg" srcset="/img/loading.gif" alt></p>
 <hr>
-<p>除此之外，我也写了另一个 API 负责查询某成绩查询 APP 上的成绩。</p>
-<p>我认为这个 API 贡献较校网查询应该更大，这让我摆脱了手机 APP 查询这一烦人的设定。</p>
-<p>然而开发过程中，后者所花费的力气远小于前者，大概是校网建设得太差的缘故吧。</p>
-<hr>
-<p>除此之外，我还尝试将 API 封装进 Docker ， 使部署更加简单、快捷。</p>
-<p>Docker 的使用非常简单，若有兴趣还请多多尝试。</p>
-<p><strong>果然造轮子学习比干看教程效果要好啊！</strong></p>
-<h2 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h2><p>没有尾声 : )</p>
+<h2 id="寒假我都干了啥"><a href="#寒假我都干了啥" class="headerlink" title="寒假我都干了啥"></a>寒假我都干了啥</h2><p>列举一下：</p>
+<ul>
+<li>学习（重温）了 C语言；</li>
+<li>学习了 PHP 基础；</li>
+<li>学习了 Burp Suite 基础；</li>
+<li>学习了 After Effect；</li>
+<li>学习了 Audition 基本操作；</li>
+<li>完成了一个 5分钟 的视频项目，比较灵活地运用了 PS Pr AE 及 Au；</li>
+<li>当了两个星期的补习老师，挣来的钱买了 飞利浦 X2HR HiFi 耳机和一块 2242 SSD；</li>
+<li>学习了 Solidworks 基本操作（这两天学的）；</li>
+</ul>
+<p>感觉还是做了不少事的。</p>
+<p>马上要开学了，下学期总算能学些我想学的了。</p>
+<p>总之，好好干吧！</p>
 
             </div>
             <hr>
@@ -299,18 +284,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/archives/6b40e5ad.html">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">提升音乐体验-本地音乐标签/歌词匹配与回放增益</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/archives/e3c95af8.html">
-                        <span class="hidden-mobile">BGP初体验-Linux,Openwrt与Quagga</span>
+                      <a href="/archives/cd7dffda.html">
+                        <span class="hidden-mobile">2020 年终总结</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -496,13 +475,6 @@
 
 
 
-
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js"></script>
-  <script>
-    if (window.mermaid) {
-      mermaid.initialize({"theme":"default"});
-    }
-  </script>
 
 
 
