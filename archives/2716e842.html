@@ -13,11 +13,9 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  
-    <meta name="description" content="在群晖服务器上搭建Minecraft基岩版服务器。">
-  
+  <meta name="description" content="在群晖服务器上搭建Minecraft基岩版服务器。">
   <meta name="author" content="Lao_Liu">
-  <meta name="keywords" content="no">
+  <meta name="keywords" content="群晖,MC,Minecraft,基岩版,服务器,教程">
   
   <title>群晖-MC基岩版服务器教程 - Lao_Liu Blog</title>
 
@@ -53,7 +51,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blog.laoliu.eu.org","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
+    var CONFIG = {"hostname":"blog.laoliu.eu.org","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -224,7 +222,7 @@
 
 <h4 id="1-Docker映像（image）的选择"><a href="#1-Docker映像（image）的选择" class="headerlink" title="1.Docker映像（image）的选择"></a>1.Docker映像（image）的选择</h4><p>在尝试过5款映像后，Lao_Liu决定使用基于<strong>官方服务器端软件</strong>制作的这一款docker映像。</p>
 <p><a href="https://hub.docker.com/r/toasterlint/minecraft_bedrock/" rel="external nofollow noopener noreferrer" target="_blank">toasterlint-minecraft_bedrock</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/1.png" srcset="/img/loading.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/1.png" srcset="/img/loading.gif" lazyload alt></p>
 <p><strong>为什么我挑选了这款映像？</strong></p>
 <ul>
 <li>官方映像拥有<strong>所有原版特性</strong>；</li>
@@ -232,22 +230,22 @@
 <li>官方映像有<strong>完整的生物系统</strong>！（必须要提出来说）。</li>
 </ul>
 <hr>
-<h4 id="2-映像的使用"><a href="#2-映像的使用" class="headerlink" title="2.映像的使用"></a>2.映像的使用</h4><p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/2.png" srcset="/img/loading.gif" alt></p>
+<h4 id="2-映像的使用"><a href="#2-映像的使用" class="headerlink" title="2.映像的使用"></a>2.映像的使用</h4><p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/2.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>在 <strong>注册表</strong> 页面下载好映像之后，你会在 <strong>映像</strong> 页面发现它。双击映像，进入开启前的设置页面。</p>
 <hr>
-<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/3.png" srcset="/img/loading.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/3.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>（这个页面会有些许不同，“启用自动重新启动”以及接下来的设置位于 <strong>高级设置</strong> 中）</p>
 <p> 这里我勾选了“启用资源限制”来防止docker占用过多内存。但经过长时间的使用后Lao_Liu发现完全不需要有顾虑，这个docker最多占用500mb内存。</p>
 <p>“启用自动重新启动”可以勾选，在docker遇到问题被关闭时会自动尝试再次开启。</p>
 <hr>
-<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/4.png" srcset="/img/loading.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/4.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>在“卷”设置中，我们选择<strong>“添加文件夹”</strong>，并在喜欢的位置新建一个文件夹来保存MC服务器的配置文件与<strong>更加重要的地图数据</strong>。</p>
 <p>然后在<strong>”装载路径“</strong>处输入：</p>
 <figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined">/<span class="hljs-class"><span class="hljs-keyword">data</span></span><br></code></pre></td></tr></table></figure>
 
 <p>这样我们就将NAS上的一个文件夹装载进docker的 /data 路径下，服务器产生的数据就会保存在本地硬盘，不会因为docker的关闭而丢失（像内存断电一样），同时也方便我们进行备份。</p>
 <hr>
-<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/5.png" srcset="/img/loading.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/MC_server/5.png" srcset="/img/loading.gif" lazyload alt></p>
 <p>在“端口设置”中，按照图中所示<strong>添加19132端口的TCP与UDP通道</strong>。在路由器处配置<strong>19132的端口转发</strong>（记得要同时转发TCP和UDP哦，游戏通讯是有用到UDP的），就能在外网访问MC服务器了。</p>
 <hr>
 <p>以上就是使用群晖搭建MC基岩版服务器的教程。很简单吧）</p>
@@ -308,24 +306,26 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments">
+              <article class="comments" id="comments" lazyload>
                 
                   
                 
                 
   <div class="disqus" style="width:100%">
     <div id="disqus_thread"></div>
-    <script>
-      Fluid.utils.waitElementVisible('disqus_thread', function() {
-        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
-        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
-          new DisqusJS({
-            shortname: 'lao-liu-blog',
-            apikey: '40kybqJWJ9hE7KmqB075Bm98aTKejvoMeBM9moEl5e5BNZnNd5q5RQTMexr5C5Gv'
+    
+      <script>
+        Fluid.utils.lazyComments('disqus_thread', function() {
+          Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+          Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'lao-liu-blog',
+              apikey: '40kybqJWJ9hE7KmqB075Bm98aTKejvoMeBM9moEl5e5BNZnNd5q5RQTMexr5C5Gv'
+            });
           });
         });
-      });
-    </script>
+      </script>
+    
     <noscript>Please enable JavaScript to view the
       <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a>
     </noscript>
@@ -397,8 +397,9 @@
   
 </footer>
 
-<!-- SCRIPTS -->
 
+  <!-- SCRIPTS -->
+  
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 
@@ -421,7 +422,7 @@
 
 
   
-    <script src="/js/lazyload.js"></script>
+    <script src="/js/img-lazyload.js"></script>
   
 
 
@@ -491,7 +492,6 @@
 
 <!-- 主题的启动项 保持在最底部 -->
 <script src="/js/boot.js"></script>
-
 
 
 </body>

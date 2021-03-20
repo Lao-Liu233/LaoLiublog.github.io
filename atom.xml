@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2021-02-26T14:38:48.531Z</updated>
+  <updated>2021-03-20T02:05:34.167Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>群晖搭建 VSCode 服务器与 Syncthing 服务</title>
+    <link href="https://blog.laoliu.eu.org/archives/375e7789.html"/>
+    <id>https://blog.laoliu.eu.org/archives/375e7789.html</id>
+    <published>2021-03-19T16:00:00.000Z</published>
+    <updated>2021-03-20T02:05:34.167Z</updated>
+    
+    <summary type="html">
+    
+      在群晖上搭建 VSCode 服务器与 Syncthing 服务，实现电脑与 NAS 间的代码同步与网页中的 Coding。
+    
+    </summary>
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>校色初体验 / 寒假总结</title>
     <link href="https://blog.laoliu.eu.org/archives/2c0bfb1a.html"/>
     <id>https://blog.laoliu.eu.org/archives/2c0bfb1a.html</id>
     <published>2021-02-26T14:00:00.000Z</published>
-    <updated>2021-02-26T14:38:48.531Z</updated>
+    <updated>2021-02-26T14:45:08.392Z</updated>
     
     <summary type="html">
     

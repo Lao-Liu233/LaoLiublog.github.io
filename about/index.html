@@ -13,9 +13,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  
-    <meta name="description" content="Lao_Liu`s Blog.">
-  
+  <meta name="description" content="Lao_Liu`s Blog.">
   <meta name="author" content="Lao_Liu">
   <meta name="keywords" content="no">
   
@@ -51,7 +49,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blog.laoliu.eu.org","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
+    var CONFIG = {"hostname":"blog.laoliu.eu.org","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -171,7 +169,7 @@
         <div class="py-5" id="board">
           
             <div class="about-avatar">
-              <img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/avatar.png" srcset="/img/loading.gif" class="img-fluid" alt="avatar">
+              <img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/avatar.png" srcset="/img/loading.gif" lazyload class="img-fluid" alt="avatar">
             </div>
           
           <div class="container">
@@ -207,7 +205,7 @@
   </div>
 </div>
 
-<article class="about-content mt-5">
+<article class="about-content page-content mt-5">
   <div class="markdown-body">
     
   </div>
@@ -264,8 +262,9 @@
   
 </footer>
 
-<!-- SCRIPTS -->
 
+  <!-- SCRIPTS -->
+  
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 
@@ -288,7 +287,7 @@
 
 
   
-    <script src="/js/lazyload.js"></script>
+    <script src="/js/img-lazyload.js"></script>
   
 
 
@@ -354,7 +353,6 @@
 
 <!-- 主题的启动项 保持在最底部 -->
 <script src="/js/boot.js"></script>
-
 
 
 </body>

@@ -13,11 +13,9 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  
-    <meta name="description" content="利用群晖or其他系统搭建Calibre-Web服务器，管理电子书。">
-  
+  <meta name="description" content="利用群晖or其他系统搭建Calibre-Web服务器，管理电子书。">
   <meta name="author" content="Lao_Liu">
-  <meta name="keywords" content="no">
+  <meta name="keywords" content="群晖,calibre-web,电子书,kindle">
   
   <title>搭建Calibre-Web电子书网页端管理服务 - Lao_Liu Blog</title>
 
@@ -53,7 +51,7 @@
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
-    var CONFIG = {"hostname":"blog.laoliu.eu.org","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
+    var CONFIG = {"hostname":"blog.laoliu.eu.org","root":"/","version":"1.8.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null},"tajs":null}};
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
@@ -260,7 +258,7 @@
 <p>如何操作？请打开SSH，在terminal内操作。</p>
 <p>若还是失败，尝试在本地Calibre软件新建一个书库，将<strong>空的</strong>数据库文件移动到你挂载的目录下。</p>
 <p><strong>安装界面示意图</strong></p>
-<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/Calibre-web/1.jpg" srcset="/img/loading.gif" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/Calibre-web/1.jpg" srcset="/img/loading.gif" lazyload alt></p>
 <h4 id="尾声"><a href="#尾声" class="headerlink" title="尾声"></a>尾声</h4><p>安装后的操作Lao_Liu就不多提了。该上传书籍的上传，该push的push。</p>
 <p>Lao_Liu给几个建议：</p>
 <ul>
@@ -325,24 +323,26 @@
 
             
               <!-- Comments -->
-              <article class="comments" id="comments">
+              <article class="comments" id="comments" lazyload>
                 
                   
                 
                 
   <div class="disqus" style="width:100%">
     <div id="disqus_thread"></div>
-    <script>
-      Fluid.utils.waitElementVisible('disqus_thread', function() {
-        Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
-        Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function () {
-          new DisqusJS({
-            shortname: 'lao-liu-blog',
-            apikey: '40kybqJWJ9hE7KmqB075Bm98aTKejvoMeBM9moEl5e5BNZnNd5q5RQTMexr5C5Gv'
+    
+      <script>
+        Fluid.utils.lazyComments('disqus_thread', function() {
+          Fluid.utils.createCssLink('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqusjs.css');
+          Fluid.utils.createScript('https://cdn.jsdelivr.net/npm/disqusjs@1.0/dist/disqus.js', function() {
+            new DisqusJS({
+              shortname: 'lao-liu-blog',
+              apikey: '40kybqJWJ9hE7KmqB075Bm98aTKejvoMeBM9moEl5e5BNZnNd5q5RQTMexr5C5Gv'
+            });
           });
         });
-      });
-    </script>
+      </script>
+    
     <noscript>Please enable JavaScript to view the
       <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a>
     </noscript>
@@ -414,8 +414,9 @@
   
 </footer>
 
-<!-- SCRIPTS -->
 
+  <!-- SCRIPTS -->
+  
   <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css">
 
@@ -438,7 +439,7 @@
 
 
   
-    <script src="/js/lazyload.js"></script>
+    <script src="/js/img-lazyload.js"></script>
   
 
 
@@ -508,7 +509,6 @@
 
 <!-- 主题的启动项 保持在最底部 -->
 <script src="/js/boot.js"></script>
-
 
 
 </body>

@@ -13,11 +13,11 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="description" content="如何从外网访问群晖服务器？最简单的方法-Zerotier。">
+  <meta name="description" content="在群晖上搭建 VSCode 服务器与 Syncthing 服务，实现电脑与 NAS 间的代码同步与网页中的 Coding。">
   <meta name="author" content="Lao_Liu">
-  <meta name="keywords" content="群晖,内网穿透,外网访问,Zerotier">
+  <meta name="keywords" content="群晖,VSCode,code-server,Syncthing,同步">
   
-  <title>群晖-外网访问一站式教程1 Zerotier - Lao_Liu Blog</title>
+  <title>群晖搭建 VSCode 服务器与 Syncthing 服务 - Lao_Liu Blog</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 
@@ -152,7 +152,7 @@
       <div class="full-bg-img">
         <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
           <div class="page-header text-center fade-in-up">
-            <span class="h2" id="subtitle" title="群晖-外网访问一站式教程1 Zerotier">
+            <span class="h2" id="subtitle" title="群晖搭建 VSCode 服务器与 Syncthing 服务">
               
             </span>
 
@@ -162,8 +162,8 @@
   
     <span class="post-meta">
       <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-      <time datetime="2019-08-20 12:00" pubdate>
-        2019年8月20日 中午
+      <time datetime="2021-03-20 00:00" pubdate>
+        2021年3月20日 凌晨
       </time>
     </span>
   
@@ -174,7 +174,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      832 字
+      681 字
     </span>
   
 
@@ -184,7 +184,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      8
+      7
        分钟
     </span>
   
@@ -214,35 +214,41 @@
         <div class="py-5" id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">群晖-外网访问一站式教程1 Zerotier</h1>
+            <h1 style="display: none">群晖搭建 VSCode 服务器与 Syncthing 服务</h1>
             
             <div class="markdown-body">
-              <p>说在前面：有一个月没更新文章了。今后尽量做到1-2周更一篇吧。Goo酱终于把我的Blog收录了（其实是我主动提交的），这些教程也能被大家看到啦！有任何问题可以在文章结尾的Gitalk处留言，我会尽快回复的！</p>
-<p>这篇教程无图，省流。(其实经过Gzip压缩后已经能省80%的数据量，我也被惊到了)</p>
+              <p>这次我尝试在群晖上搭建 VSCode 服务器与 Syncthing 服务，实现电脑与 NAS 间的代码同步与网页中的 Coding。</p>
 <a id="more"></a>
 
 <hr>
-<p>在上一回的教程里，我们成功搭建了MC基岩版服务器。</p>
-<p><a href="https://blog.laoliu.icu/2019/07/27/MC_Server/" rel="external nofollow noopener noreferrer" target="_blank">群晖-MC基岩版服务器教程</a></p>
-<p>但这个服务器仅存在于本地，若朋友不在同一个局域网下，就无法连接此服务器（这不是肯定的嘛）。</p>
-<p>下面Lao_Liu将介绍几种从往外访问家里的群晖服务器的方法。</p>
-<hr>
-<h4 id="最简单的方法-Zerotier-VPN法"><a href="#最简单的方法-Zerotier-VPN法" class="headerlink" title="最简单的方法 - Zerotier-VPN法"></a>最简单的方法 - Zerotier-VPN法</h4><p>有兴趣了解VPN技术的朋友可以点击查看 <a href="https://zh.wikipedia.org/wiki/虛擬私人網路" rel="external nofollow noopener noreferrer" target="_blank">维基百科-VPN</a></p>
-<p>Zerotier可以提供免费的VPN服务，无需复杂配置即可在任何地方连接本地服务器</p>
-<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>第一步：<a href="https://download.zerotier.com/dist/synology/" rel="external nofollow noopener noreferrer" target="_blank">下载对应版本的Zerotier软件</a> 并于软件市场安装</p>
-<p>示范：</p>
-<p>例如我的群晖的CPU是64位的J1900，我选择了这一款软件<a href="https://download.zerotier.com/dist/synology/zerotier_x64-6.1_1.4.0-0.spk" rel="external nofollow noopener noreferrer" target="_blank">zerotier_x64-6.1_1.4.0-0.spk</a></p>
-<p>接下来，在群晖的 <code>套件中心-设置-信任层级</code> 中选择<code>任何发行者</code></p>
-<p>然后在<code>套件中心-手动安装</code>里选择刚刚下载好的<code>zerotier_xxxxxx.spk</code>安装包进行安装</p>
-<p>第二步：注册Zerotier。网络上教程极多，我就不再赘述，可以参考这一篇文章。</p>
-<p><a href="https://www.jianshu.com/p/eefddb256ad7" rel="external nofollow noopener noreferrer" target="_blank">内网穿透工具——ZeroTier One的使用</a> 作者 <a href="https://www.jianshu.com/u/b28343f20873" rel="external nofollow noopener noreferrer" target="_blank">BiteMan</a></p>
-<p>第三步：记住刚刚注册完拿到的Network ID了么，打开Zerotier套件，在右下角输入Network ID点击join，就加入这个网络（Networks）啦。记得在Zerotier网站控制台里勾选这个新连接（新创建的网络默认使用加入需要验证的规则，我也建议开启，增强安全性）（Lao_Liu强烈建议每添加一台设备即为其命名）。</p>
-<p>第四步：在需要访问群晖服务器的设备上也安装好Zerotier软件（比起手动安装要简单不少，各大应用市场里也都有，建议下载官方提供的安装包），重复步骤三，加入同一个网络（Networks）下。</p>
-<p>到此，Zerotier双端已经配置完毕。</p>
-<h5 id="如何使用呢？"><a href="#如何使用呢？" class="headerlink" title="如何使用呢？"></a>如何使用呢？</h5><p>在Zerotier网页控制台里，若已添加两台设备，你会看到Members分栏中有两台设备，他们的右边都有一个ip地址。当两个设备都打开Zerotier软件并成功连接了VPN，你就可以把他们当作在一个局域网下，ip地址就是Zerotier提供的那个，端口号原封不动。</p>
-<p>例如我想访问群晖的DSM管理界面，输入<code>xxx.xxx.xxx.xxx:5000</code>即可。（Zerotier提供了几种保留网段，可以从10 172 192网段里选择你喜欢的ip段）</p>
-<h5 id="已知问题"><a href="#已知问题" class="headerlink" title="已知问题"></a>已知问题</h5><p>Zerotier适合访问网页/SSH等简单服务，若用其连接游戏，可能会有某些时刻丢包率过高（原因不明）导致强制登出，严重影响游戏体验。</p>
-<p>下一篇文章里我会介绍第二种方法-DDNS，此方法可以带来极致体验（笑）。</p>
+<h2 id="VSCode-网页版的实现"><a href="#VSCode-网页版的实现" class="headerlink" title="VSCode 网页版的实现"></a>VSCode 网页版的实现</h2><h3 id="偶遇服务器软件"><a href="#偶遇服务器软件" class="headerlink" title="偶遇服务器软件"></a>偶遇服务器软件</h3><p>刷 RSS 时我看到 V2EX 上一个帖子分享了一个实用工具：<a href https: github.com conwnet github1s"">github+1s</a></p>
+<p>这个项目可以实现在<strong>网页版 VSCode</strong>中打开 Github 上的代码。</p>
+<p>这个项目使用的 <a href https: github.com cdr code-server"">code-server</a> 引起了我的兴趣。</p>
+<h3 id="code-server-的部署"><a href="#code-server-的部署" class="headerlink" title="code-server 的部署"></a>code-server 的部署</h3><p>群晖自带的 Docker 套件简化了部署的过程。</p>
+<p>在注册表中搜索 <a href="https://registry.hub.docker.com/r/codercom/code-server/" rel="external nofollow noopener noreferrer" target="_blank">code-server</a> 下载 image；</p>
+<p>打开 image 进行配置：</p>
+<ul>
+<li>使用高权限执行容器</li>
+<li>在 <code>高级设置-环境</code> 页面中添加环境变量 <code>PASSWORD</code>，值设定为你的登陆密码（由于在 Docker 页面中以明文保存，请注意密码安全）。</li>
+</ul>
+<p>启动容器，并使用 Docker 内置的 <code>终端机</code> 打开一个新的 <code>bash</code>。换源、更新 apt 、安装常用软件我就不再赘述。</p>
+<h3 id="code-server-的外网访问"><a href="#code-server-的外网访问" class="headerlink" title="code-server 的外网访问"></a>code-server 的外网访问</h3><p>code-server 没有自带 HTTPS 相关的配置，需要使用网站服务器进行反向代理。</p>
+<p>目前比较流行的有 Caddy 和 NGINX 两款。</p>
+<p>鉴于 Caddy 配置简单且 HTTPS 优先，我这次使用 Caddy。</p>
+<p><a href="https://caddyserver.com/docs/install#debian-ubuntu-raspbian" rel="external nofollow noopener noreferrer" target="_blank">Caddy 官方安装文档</a></p>
+<p>或使用一键安装脚本</p>
+<p><code>curl https://getcaddy.com | bash -s personal</code></p>
+<p>如果有开放的 443 端口，则可使用 Caddy 的自动 HTTPS 功能进行快速配置。</p>
+<p>若像我一样在家中的 NAS 上配置 code-server，则需要自己申请 tls 证书 (如 Let`s Encrypt)，并按照 <a href="https://dengxiaolong.com/caddy/zh/tls.html" rel="external nofollow noopener noreferrer" target="_blank">Caddy-tls</a> 配置。</p>
+<p>反向代理配置可参考 <a href="https://github.com/cdr/code-server/blob/main/docs/guide.md#lets-encrypt" rel="external nofollow noopener noreferrer" target="_blank">code-server 官方的反代配置教程</a>。</p>
+<h3 id="一些疑难杂症"><a href="#一些疑难杂症" class="headerlink" title="一些疑难杂症"></a>一些疑难杂症</h3><h4 id="一些插件无法安装"><a href="#一些插件无法安装" class="headerlink" title="一些插件无法安装"></a>一些插件无法安装</h4><p>目前 code-server 的 VSCode 版本为 1.51.1， VSCode 官方则为 1.54.3 ，因此某些较新的插件可能无法使用。</p>
+<p>可以前往 <a href="https://marketplace.visualstudio.com/" rel="external nofollow noopener noreferrer" target="_blank">VS插件市场</a> 下载旧版插件并手动安装。</p>
+<h4 id="Docker-内挂载的目录无写权限"><a href="#Docker-内挂载的目录无写权限" class="headerlink" title="Docker 内挂载的目录无写权限"></a>Docker 内挂载的目录无写权限</h4><p>使用 <code>sudo chmod 777 ./</code> 给 coder 用户赋予读写权力。</p>
+<h4 id="Docker-内-Caddy-无法自启"><a href="#Docker-内-Caddy-无法自启" class="headerlink" title="Docker 内 Caddy 无法自启"></a>Docker 内 Caddy 无法自启</h4><p>这个我也还没有解决。暂且手动启动。</p>
+<h4 id="code-server-的各种性能问题"><a href="#code-server-的各种性能问题" class="headerlink" title="code-server 的各种性能问题"></a>code-server 的各种性能问题</h4><p>等待更多的更新吧，我接下来会尝试在 Docker 里编译原版 VSCode 并开启 Web 模式，对比二者性能。</p>
+<h2 id="Syncthing-服务搭建"><a href="#Syncthing-服务搭建" class="headerlink" title="Syncthing 服务搭建"></a>Syncthing 服务搭建</h2><p><a href="https://syncthing.net/" rel="external nofollow noopener noreferrer" target="_blank">Syncthing 官网</a> 已经给出了十分详尽的安装教程，也有群晖的安装包，我就不再赘述安装过程。</p>
+<p>Syncthing 的管理页面端口为 <code>8384</code>，若想在外网访问请使用 HTTPS。可以使用群晖内置的反向代理服务器进行反代。</p>
+<p>要注意把 <code>22000</code> 端口的 <code>TCP</code> 与 <code>UDP</code> 全部开放，才可在外网顺利与 NAS 同步。</p>
 
             </div>
             <hr>
@@ -277,18 +283,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/archives/87bacf3f.html">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">群晖-外网访问一站式教程2 DDNS</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/archives/2716e842.html">
-                        <span class="hidden-mobile">群晖-MC基岩版服务器教程</span>
+                      <a href="/archives/2c0bfb1a.html">
+                        <span class="hidden-mobile">校色初体验 / 寒假总结</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
