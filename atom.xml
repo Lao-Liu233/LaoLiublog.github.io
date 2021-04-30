@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2021-03-20T02:05:34.167Z</updated>
+  <updated>2021-04-30T12:49:20.245Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>近日败家：Chrombook Duet 与 小米手环6</title>
+    <link href="https://blog.laoliu.eu.org/archives/4a562e35.html"/>
+    <id>https://blog.laoliu.eu.org/archives/4a562e35.html</id>
+    <published>2021-04-30T13:00:00.000Z</published>
+    <updated>2021-04-30T12:49:20.245Z</updated>
+    
+    <summary type="html">
+    
+      分享一下最近败家的几样电子产品。
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>群晖搭建 VSCode 服务器与 Syncthing 服务</title>
