@@ -5,7 +5,7 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
@@ -40,9 +40,13 @@
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
+
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -55,7 +59,7 @@
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
@@ -218,14 +222,14 @@
             
             <div class="markdown-body">
               <p>这次我尝试在群晖上搭建 VSCode 服务器与 Syncthing 服务，实现电脑与 NAS 间的代码同步与网页中的 Coding。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <hr>
 <h2 id="VSCode-网页版的实现"><a href="#VSCode-网页版的实现" class="headerlink" title="VSCode 网页版的实现"></a>VSCode 网页版的实现</h2><h3 id="偶遇服务器软件"><a href="#偶遇服务器软件" class="headerlink" title="偶遇服务器软件"></a>偶遇服务器软件</h3><p>刷 RSS 时我看到 V2EX 上一个帖子分享了一个实用工具：<a href https: github.com conwnet github1s"">github+1s</a></p>
 <p>这个项目可以实现在<strong>网页版 VSCode</strong>中打开 Github 上的代码。</p>
 <p>这个项目使用的 <a href https: github.com cdr code-server"">code-server</a> 引起了我的兴趣。</p>
 <h3 id="code-server-的部署"><a href="#code-server-的部署" class="headerlink" title="code-server 的部署"></a>code-server 的部署</h3><p>群晖自带的 Docker 套件简化了部署的过程。</p>
-<p>在注册表中搜索 <a href="https://registry.hub.docker.com/r/codercom/code-server/" rel="external nofollow noopener noreferrer" target="_blank">code-server</a> 下载 image；</p>
+<p>在注册表中搜索 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://registry.hub.docker.com/r/codercom/code-server/">code-server</a> 下载 image；</p>
 <p>打开 image 进行配置：</p>
 <ul>
 <li>使用高权限执行容器</li>
@@ -235,18 +239,18 @@
 <h3 id="code-server-的外网访问"><a href="#code-server-的外网访问" class="headerlink" title="code-server 的外网访问"></a>code-server 的外网访问</h3><p>code-server 没有自带 HTTPS 相关的配置，需要使用网站服务器进行反向代理。</p>
 <p>目前比较流行的有 Caddy 和 NGINX 两款。</p>
 <p>鉴于 Caddy 配置简单且 HTTPS 优先，我这次使用 Caddy。</p>
-<p><a href="https://caddyserver.com/docs/install#debian-ubuntu-raspbian" rel="external nofollow noopener noreferrer" target="_blank">Caddy 官方安装文档</a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://caddyserver.com/docs/install#debian-ubuntu-raspbian">Caddy 官方安装文档</a></p>
 <p>或使用一键安装脚本</p>
 <p><code>curl https://getcaddy.com | bash -s personal</code></p>
 <p>如果有开放的 443 端口，则可使用 Caddy 的自动 HTTPS 功能进行快速配置。</p>
-<p>若像我一样在家中的 NAS 上配置 code-server，则需要自己申请 tls 证书 (如 Let`s Encrypt)，并按照 <a href="https://dengxiaolong.com/caddy/zh/tls.html" rel="external nofollow noopener noreferrer" target="_blank">Caddy-tls</a> 配置。</p>
-<p>反向代理配置可参考 <a href="https://github.com/cdr/code-server/blob/main/docs/guide.md#lets-encrypt" rel="external nofollow noopener noreferrer" target="_blank">code-server 官方的反代配置教程</a>。</p>
+<p>若像我一样在家中的 NAS 上配置 code-server，则需要自己申请 tls 证书 (如 Let`s Encrypt)，并按照 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://dengxiaolong.com/caddy/zh/tls.html">Caddy-tls</a> 配置。</p>
+<p>反向代理配置可参考 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/cdr/code-server/blob/main/docs/guide.md#lets-encrypt">code-server 官方的反代配置教程</a>。</p>
 <h3 id="一些疑难杂症"><a href="#一些疑难杂症" class="headerlink" title="一些疑难杂症"></a>一些疑难杂症</h3><h4 id="一些插件无法安装"><a href="#一些插件无法安装" class="headerlink" title="一些插件无法安装"></a>一些插件无法安装</h4><p>目前 code-server 的 VSCode 版本为 1.51.1， VSCode 官方则为 1.54.3 ，因此某些较新的插件可能无法使用。</p>
-<p>可以前往 <a href="https://marketplace.visualstudio.com/" rel="external nofollow noopener noreferrer" target="_blank">VS插件市场</a> 下载旧版插件并手动安装。</p>
+<p>可以前往 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://marketplace.visualstudio.com/">VS插件市场</a> 下载旧版插件并手动安装。</p>
 <h4 id="Docker-内挂载的目录无写权限"><a href="#Docker-内挂载的目录无写权限" class="headerlink" title="Docker 内挂载的目录无写权限"></a>Docker 内挂载的目录无写权限</h4><p>使用 <code>sudo chmod 777 ./</code> 给 coder 用户赋予读写权力。</p>
 <h4 id="Docker-内-Caddy-无法自启"><a href="#Docker-内-Caddy-无法自启" class="headerlink" title="Docker 内 Caddy 无法自启"></a>Docker 内 Caddy 无法自启</h4><p>这个我也还没有解决。暂且手动启动。</p>
 <h4 id="code-server-的各种性能问题"><a href="#code-server-的各种性能问题" class="headerlink" title="code-server 的各种性能问题"></a>code-server 的各种性能问题</h4><p>等待更多的更新吧，我接下来会尝试在 Docker 里编译原版 VSCode 并开启 Web 模式，对比二者性能。</p>
-<h2 id="Syncthing-服务搭建"><a href="#Syncthing-服务搭建" class="headerlink" title="Syncthing 服务搭建"></a>Syncthing 服务搭建</h2><p><a href="https://syncthing.net/" rel="external nofollow noopener noreferrer" target="_blank">Syncthing 官网</a> 已经给出了十分详尽的安装教程，也有群晖的安装包，我就不再赘述安装过程。</p>
+<h2 id="Syncthing-服务搭建"><a href="#Syncthing-服务搭建" class="headerlink" title="Syncthing 服务搭建"></a>Syncthing 服务搭建</h2><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://syncthing.net/">Syncthing 官网</a> 已经给出了十分详尽的安装教程，也有群晖的安装包，我就不再赘述安装过程。</p>
 <p>Syncthing 的管理页面端口为 <code>8384</code>，若想在外网访问请使用 HTTPS。可以使用群晖内置的反向代理服务器进行反代。</p>
 <p>要注意把 <code>22000</code> 端口的 <code>TCP</code> 与 <code>UDP</code> 全部开放，才可在外网顺利与 NAS 同步。</p>
 
@@ -258,7 +262,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/教程/">教程</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
                     
                   </div>
                 
@@ -266,7 +270,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/教程/">教程</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
                     
                   </div>
                 
@@ -274,7 +278,7 @@
               
                 <p class="note note-warning">
                   
-                    本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 3.0协议</a> 。转载请注明出处！
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer">CC BY-SA 3.0协议</a> 。转载请注明出处！
                   
                 </p>
               

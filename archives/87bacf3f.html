@@ -5,7 +5,7 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
@@ -40,9 +40,13 @@
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
+
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -55,7 +59,7 @@
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
@@ -217,10 +221,10 @@
             <h1 style="display: none">群晖-外网访问一站式教程2 DDNS</h1>
             
             <div class="markdown-body">
-              <h4 id="什么是DDNS"><a href="#什么是DDNS" class="headerlink" title="什么是DDNS"></a>什么是DDNS</h4><p><a href="https://zh.m.wikipedia.org/zh/%E5%8B%95%E6%85%8BDNS" rel="external nofollow noopener noreferrer" target="_blank">维基百科-动态DNS</a><br>鉴于IPv4地址的枯竭，运营商开始给家用宽带分配动态IP地址，即IP会随时间或重新拨号而改变。DDNS可以允许用户通过API动态地将变化的IP地址传送给域名解析商，达到域名外网访问的效果。<br>由于带宽分配原因，家用宽带的上传带宽一般在20-30mbps间，故外网访问速度并没有达到如签约的100mbps属正常。</p>
+              <h4 id="什么是DDNS"><a href="#什么是DDNS" class="headerlink" title="什么是DDNS"></a>什么是DDNS</h4><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://zh.m.wikipedia.org/zh/%E5%8B%95%E6%85%8BDNS">维基百科-动态DNS</a><br>鉴于IPv4地址的枯竭，运营商开始给家用宽带分配动态IP地址，即IP会随时间或重新拨号而改变。DDNS可以允许用户通过API动态地将变化的IP地址传送给域名解析商，达到域名外网访问的效果。<br>由于带宽分配原因，家用宽带的上传带宽一般在20-30mbps间，故外网访问速度并没有达到如签约的100mbps属正常。</p>
 <hr>
 <h4 id="事先准备"><a href="#事先准备" class="headerlink" title="事先准备"></a>事先准备</h4><p>打电话给ISP（运营商）的小姐姐，让她给你公网IP，如果问起原因可以回答家里装监控。没有开启公网IP将无法从外网访问家庭的内部网络。<br>由于运营商（指大部分，如电信）封锁了80（HTTP）和443（HTTPS）端口，我们将使用其他的端口进行访问。挑选一些你喜欢的端口，预备使用（如8080-8090，4431-4439等）。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <hr>
 <h4 id="选择支持DDNS的域名解析服务商"><a href="#选择支持DDNS的域名解析服务商" class="headerlink" title="选择支持DDNS的域名解析服务商"></a>选择支持DDNS的域名解析服务商</h4><h5 id="Cloudflare"><a href="#Cloudflare" class="headerlink" title="Cloudflare"></a>Cloudflare</h5><p>老牌的域名解析商，也是少有的免费提供CDN的服务商。<br>我推荐Cloudflare的原因有三点</p>
@@ -239,7 +243,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/教程/">教程</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
                     
                   </div>
                 
@@ -247,7 +251,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/教程/">教程</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
                     
                   </div>
                 
@@ -255,7 +259,7 @@
               
                 <p class="note note-warning">
                   
-                    本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 3.0协议</a> 。转载请注明出处！
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer">CC BY-SA 3.0协议</a> 。转载请注明出处！
                   
                 </p>
               

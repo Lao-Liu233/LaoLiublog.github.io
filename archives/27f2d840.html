@@ -5,7 +5,7 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
@@ -40,9 +40,13 @@
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
+
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -55,7 +59,7 @@
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
@@ -218,7 +222,7 @@
             
             <div class="markdown-body">
               <p>下面Lao_Liu介绍一种适用于iPv6-DDNS的绝佳方法！</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="通过iPv6访问的优点"><a href="#通过iPv6访问的优点" class="headerlink" title="通过iPv6访问的优点"></a>通过iPv6访问的优点</h3><p>没有端口限制！！！可以通过80/443访问web服务器了！不用带着烦人的端口号！</p>
 <p>每台设备有独立的iPv6，配置更加方便，无需路由器充当网关进行端口转发！</p>
@@ -226,9 +230,9 @@
 <p>技术问题，难以解决。一般来说手机的移动网络都已分发iPv6地址。</p>
 <p>想要家宽拥有iPv6？或许你需要修改光猫设置（超级管理），亦或是将光猫改为桥接模式，用路由器拨号从而获取iPv6地址。</p>
 <h3 id="如何实现iPv6-DDNS"><a href="#如何实现iPv6-DDNS" class="headerlink" title="如何实现iPv6-DDNS"></a>如何实现iPv6-DDNS</h3><ul>
-<li>在 <a href="https://dynv6.com" rel="external nofollow noopener noreferrer" target="_blank">dynv6</a>注册一个账号</li>
+<li>在 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://dynv6.com">dynv6</a>注册一个账号</li>
 <li>在 <strong>Instructions</strong> 界面查看API与你的DDNS域名</li>
-<li>下载官方提供的 <a href="https://gist.github.com/corny/7a07f5ac901844bd20c9" rel="external nofollow noopener noreferrer" target="_blank">a nice script</a></li>
+<li>下载官方提供的 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://gist.github.com/corny/7a07f5ac901844bd20c9">a nice script</a></li>
 </ul>
 <blockquote>
 <p>这点尤其重要！Lao_Liu在网络上寻寻觅觅无数脚本，总是失败。最后才发现官方有提供脚本也！一试马上就成功了。</p>
@@ -236,7 +240,7 @@
 <ul>
 <li>按照页面内提供的代码执行脚本</li>
 </ul>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">token</span>= *your <span class="hljs-keyword">token</span>* ./dynv6.<span class="hljs-keyword">sh</span> *your DDNS domain*<br></code></pre></td></tr></table></figure>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">token</span>= *your <span class="hljs-keyword">token</span>* ./dynv6.<span class="hljs-keyword">sh</span> *your DDNS domain*<br></code></pre></td></tr></table></figure>
 
 <ul>
 <li>可以将其添加到crontab一类的软件内，规定时间自动执行脚本（每10分钟一次为宜）</li>
@@ -257,7 +261,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/教程/">教程</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
                     
                   </div>
                 
@@ -265,7 +269,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/教程/">教程</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
                     
                   </div>
                 
@@ -273,7 +277,7 @@
               
                 <p class="note note-warning">
                   
-                    本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 3.0协议</a> 。转载请注明出处！
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer">CC BY-SA 3.0协议</a> 。转载请注明出处！
                   
                 </p>
               

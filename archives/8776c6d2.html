@@ -5,7 +5,7 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
@@ -40,9 +40,13 @@
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
+
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -55,7 +59,7 @@
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
@@ -219,23 +223,23 @@
             <div class="markdown-body">
               <p>说在前面：有一个月没更新文章了。今后尽量做到1-2周更一篇吧。Goo酱终于把我的Blog收录了（其实是我主动提交的），这些教程也能被大家看到啦！有任何问题可以在文章结尾的Gitalk处留言，我会尽快回复的！</p>
 <p>这篇教程无图，省流。(其实经过Gzip压缩后已经能省80%的数据量，我也被惊到了)</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <hr>
 <p>在上一回的教程里，我们成功搭建了MC基岩版服务器。</p>
-<p><a href="https://blog.laoliu.icu/2019/07/27/MC_Server/" rel="external nofollow noopener noreferrer" target="_blank">群晖-MC基岩版服务器教程</a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://blog.laoliu.icu/2019/07/27/MC_Server/">群晖-MC基岩版服务器教程</a></p>
 <p>但这个服务器仅存在于本地，若朋友不在同一个局域网下，就无法连接此服务器（这不是肯定的嘛）。</p>
 <p>下面Lao_Liu将介绍几种从往外访问家里的群晖服务器的方法。</p>
 <hr>
-<h4 id="最简单的方法-Zerotier-VPN法"><a href="#最简单的方法-Zerotier-VPN法" class="headerlink" title="最简单的方法 - Zerotier-VPN法"></a>最简单的方法 - Zerotier-VPN法</h4><p>有兴趣了解VPN技术的朋友可以点击查看 <a href="https://zh.wikipedia.org/wiki/虛擬私人網路" rel="external nofollow noopener noreferrer" target="_blank">维基百科-VPN</a></p>
+<h4 id="最简单的方法-Zerotier-VPN法"><a href="#最简单的方法-Zerotier-VPN法" class="headerlink" title="最简单的方法 - Zerotier-VPN法"></a>最简单的方法 - Zerotier-VPN法</h4><p>有兴趣了解VPN技术的朋友可以点击查看 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://zh.wikipedia.org/wiki/虛擬私人網路">维基百科-VPN</a></p>
 <p>Zerotier可以提供免费的VPN服务，无需复杂配置即可在任何地方连接本地服务器</p>
-<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>第一步：<a href="https://download.zerotier.com/dist/synology/" rel="external nofollow noopener noreferrer" target="_blank">下载对应版本的Zerotier软件</a> 并于软件市场安装</p>
+<h5 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h5><p>第一步：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://download.zerotier.com/dist/synology/">下载对应版本的Zerotier软件</a> 并于软件市场安装</p>
 <p>示范：</p>
-<p>例如我的群晖的CPU是64位的J1900，我选择了这一款软件<a href="https://download.zerotier.com/dist/synology/zerotier_x64-6.1_1.4.0-0.spk" rel="external nofollow noopener noreferrer" target="_blank">zerotier_x64-6.1_1.4.0-0.spk</a></p>
+<p>例如我的群晖的CPU是64位的J1900，我选择了这一款软件<a target="_blank" rel="external nofollow noopener noreferrer" href="https://download.zerotier.com/dist/synology/zerotier_x64-6.1_1.4.0-0.spk">zerotier_x64-6.1_1.4.0-0.spk</a></p>
 <p>接下来，在群晖的 <code>套件中心-设置-信任层级</code> 中选择<code>任何发行者</code></p>
 <p>然后在<code>套件中心-手动安装</code>里选择刚刚下载好的<code>zerotier_xxxxxx.spk</code>安装包进行安装</p>
 <p>第二步：注册Zerotier。网络上教程极多，我就不再赘述，可以参考这一篇文章。</p>
-<p><a href="https://www.jianshu.com/p/eefddb256ad7" rel="external nofollow noopener noreferrer" target="_blank">内网穿透工具——ZeroTier One的使用</a> 作者 <a href="https://www.jianshu.com/u/b28343f20873" rel="external nofollow noopener noreferrer" target="_blank">BiteMan</a></p>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.jianshu.com/p/eefddb256ad7">内网穿透工具——ZeroTier One的使用</a> 作者 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.jianshu.com/u/b28343f20873">BiteMan</a></p>
 <p>第三步：记住刚刚注册完拿到的Network ID了么，打开Zerotier套件，在右下角输入Network ID点击join，就加入这个网络（Networks）啦。记得在Zerotier网站控制台里勾选这个新连接（新创建的网络默认使用加入需要验证的规则，我也建议开启，增强安全性）（Lao_Liu强烈建议每添加一台设备即为其命名）。</p>
 <p>第四步：在需要访问群晖服务器的设备上也安装好Zerotier软件（比起手动安装要简单不少，各大应用市场里也都有，建议下载官方提供的安装包），重复步骤三，加入同一个网络（Networks）下。</p>
 <p>到此，Zerotier双端已经配置完毕。</p>
@@ -252,7 +256,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/教程/">教程</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B/">教程</a>
                     
                   </div>
                 
@@ -260,7 +264,7 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/教程/">教程</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
                     
                   </div>
                 
@@ -268,7 +272,7 @@
               
                 <p class="note note-warning">
                   
-                    本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 3.0协议</a> 。转载请注明出处！
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer">CC BY-SA 3.0协议</a> 。转载请注明出处！
                   
                 </p>
               

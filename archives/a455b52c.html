@@ -5,7 +5,7 @@
 
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
   <meta charset="UTF-8">
   <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/Lao-Liu233/blog_imgs/favicon.ico">
@@ -40,9 +40,13 @@
 
 
 <!-- 主题依赖的图标库，不要自行修改 -->
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
 
+
+
 <link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
 
 <link rel="stylesheet" href="/css/main.css">
 
@@ -55,7 +59,7 @@
   </script>
   <script src="/js/utils.js"></script>
   <script src="/js/color-schema.js"></script>
-</head>
+<meta name="generator" content="Hexo 5.4.0"></head>
 
 
 <body>
@@ -174,7 +178,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      562 字
+      568 字
     </span>
   
 
@@ -219,18 +223,18 @@
             <div class="markdown-body">
               <p>使用 Hyper-V 运行 Windows LTSC 虚拟机，以隔离流氓的国产软件们。</p>
 <h3 id="为何大费周章？"><a href="#为何大费周章？" class="headerlink" title="为何大费周章？"></a>为何大费周章？</h3><p>Lao_Liu 试过网络上的不少方法来隔离鹅厂的软件 —— 刚开源的 Sandboxie 也好，利用 Windows ACL 机制通过低权账户加以限制也好 —— 都因为权限问题失败了。最后决定用虚拟环境直接隔离这些软件。</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h3 id="为什么是-Hyper-V-和-LTSC？"><a href="#为什么是-Hyper-V-和-LTSC？" class="headerlink" title="为什么是 Hyper-V 和 LTSC？"></a>为什么是 Hyper-V 和 LTSC？</h3><p>Lao_Liu 用过 VMWare，觉得还是 Windows 原生的 Hyper-V 启动最快。还不用钱。</p>
 <p>Windows LTSC 是企业定制版，官方精简了系统，性能开销更少。</p>
 <h3 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h3><p>拥有 16G 以上内存及 NVME 高速硬盘的用户可以放心采用该方案，虚拟机运行时不会影响其他软件的流畅运行。</p>
-<h4 id="下载-MSDN-上的-Windows-LTSC"><a href="#下载-MSDN-上的-Windows-LTSC" class="headerlink" title="下载 MSDN 上的 Windows LTSC:"></a>下载 <a href="https://msdn.itellyou.cn/" rel="external nofollow noopener noreferrer" target="_blank">MSDN</a> 上的 Windows LTSC:</h4><p>侧边栏选择 <strong>操作系统</strong> ；选择 <strong>Windows 10 Enterprise LTSC 2019</strong>。</p>
+<h4 id="下载-MSDN-上的-Windows-LTSC"><a href="#下载-MSDN-上的-Windows-LTSC" class="headerlink" title="下载 MSDN 上的 Windows LTSC:"></a>下载 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://msdn.itellyou.cn/">MSDN</a> 上的 Windows LTSC:</h4><p>侧边栏选择 <strong>操作系统</strong> ；选择 <strong>Windows 10 Enterprise LTSC 2019</strong>。</p>
 <h4 id="安装-Hyper-V："><a href="#安装-Hyper-V：" class="headerlink" title="安装 Hyper-V："></a>安装 Hyper-V：</h4><p>对于 Windows 专业版 用户，在 控制面板 - 程序与功能 - 启动或关闭Windows功能 中找到 <strong>Hyper-V</strong> 并打开。</p>
 <p>对于 其他版本 Windows 的用户，则稍微有些麻烦：</p>
 <ol>
 <li>在记事本中输入如下代码</li>
 </ol>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs undefined">pushd <span class="hljs-string">"%~dp0"</span><br><br>dir <span class="hljs-string">/b</span> %SystemRoot%\servicing\Packages\*Hyper-V*<span class="hljs-string">.mum</span> &gt;hyper-v.txt<br><br>for <span class="hljs-string">/f</span> %%i in <span class="hljs-params">('findstr /i . hyper-v.txt 2^&gt;nul')</span> do dism <span class="hljs-string">/online</span> <span class="hljs-string">/norestart</span> <span class="hljs-string">/add-package</span>:<span class="hljs-string">"%SystemRoot%\servicing\Packages\%%i"</span><br><br>del hyper-v.txt<br><br>Dism <span class="hljs-string">/online</span> <span class="hljs-string">/enable-feature</span> <span class="hljs-string">/featurename</span><span class="hljs-function">:Microsoft-Hyper-V-All</span> <span class="hljs-string">/LimitAccess</span> <span class="hljs-string">/ALL</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli">pushd <span class="hljs-string">&quot;%~dp0&quot;</span><br><br>dir <span class="hljs-string">/b</span> %SystemRoot%\servicing\Packages\*Hyper-V*<span class="hljs-string">.mum</span> &gt;hyper-v.txt<br><br>for <span class="hljs-string">/f</span> %%i in <span class="hljs-params">(&#x27;findstr /i . hyper-v.txt 2^&gt;nul&#x27;)</span> do dism <span class="hljs-string">/online</span> <span class="hljs-string">/norestart</span> <span class="hljs-string">/add-package</span>:<span class="hljs-string">&quot;%SystemRoot%\servicing\Packages\%%i&quot;</span><br><br>del hyper-v.txt<br><br>Dism <span class="hljs-string">/online</span> <span class="hljs-string">/enable-feature</span> <span class="hljs-string">/featurename</span><span class="hljs-function">:Microsoft-Hyper-V-All</span> <span class="hljs-string">/LimitAccess</span> <span class="hljs-string">/ALL</span><br></code></pre></td></tr></table></figure>
 
 <ol start="2">
 <li>把文件保存为Hyper-V.cmd</li>
@@ -238,7 +242,7 @@
 </ol>
 <p>根据提示完成安装。</p>
 <blockquote>
-<p>摘自知乎 <a href="https://zhuanlan.zhihu.com/p/51939654" rel="external nofollow noopener noreferrer" target="_blank">没人不认识我</a> 的回答</p>
+<p>摘自知乎 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://zhuanlan.zhihu.com/p/51939654">没人不认识我</a> 的回答</p>
 </blockquote>
 <h3 id="安装虚拟机"><a href="#安装虚拟机" class="headerlink" title="安装虚拟机"></a>安装虚拟机</h3><p>打开 Hyper-V ，选择 <strong>新建 - 虚拟机</strong> ；</p>
 <p>根据向导提示设置虚拟机，选择 <strong>第一代虚拟机</strong> ；</p>
@@ -258,7 +262,7 @@
                   <div class="post-meta mr-3">
                     <i class="iconfont icon-category"></i>
                     
-                      <a class="hover-with-bg" href="/categories/教程-软件/">教程 软件</a>
+                      <a class="hover-with-bg" href="/categories/%E6%95%99%E7%A8%8B-%E8%BD%AF%E4%BB%B6/">教程 软件</a>
                     
                   </div>
                 
@@ -266,9 +270,9 @@
                   <div class="post-meta">
                     <i class="iconfont icon-tags"></i>
                     
-                      <a class="hover-with-bg" href="/tags/教程/">教程</a>
+                      <a class="hover-with-bg" href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
                     
-                      <a class="hover-with-bg" href="/tags/软件/">软件</a>
+                      <a class="hover-with-bg" href="/tags/%E8%BD%AF%E4%BB%B6/">软件</a>
                     
                   </div>
                 
@@ -276,7 +280,7 @@
               
                 <p class="note note-warning">
                   
-                    本博客所有文章除特别声明外，均采用 <a href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer" target="_blank">CC BY-SA 3.0协议</a> 。转载请注明出处！
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://zh.wikipedia.org/wiki/Wikipedia:CC_BY-SA_3.0%E5%8D%8F%E8%AE%AE%E6%96%87%E6%9C%AC" rel="external nofollow noopener noreferrer">CC BY-SA 3.0协议</a> 。转载请注明出处！
                   
                 </p>
               
