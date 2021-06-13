@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2021-04-30T13:00:01.407Z</updated>
+  <updated>2021-06-13T06:51:17.319Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Osprey Commet 简评</title>
+    <link href="https://blog.laoliu.eu.org/archives/43a7a15c.html"/>
+    <id>https://blog.laoliu.eu.org/archives/43a7a15c.html</id>
+    <published>2021-06-13T07:00:00.000Z</published>
+    <updated>2021-06-13T06:51:17.319Z</updated>
+    
+    <summary type="html">
+    
+      简评 618 购买的通勤背包 —— Osprey Commet。
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
   
   <entry>
     <title>近日败家：Chrombook Duet 与 小米手环6</title>
@@ -390,24 +410,6 @@
     </summary>
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>年轻人的第一台NAS(误)-硬件选购</title>
-    <link href="https://blog.laoliu.eu.org/archives/757c72a1.html"/>
-    <id>https://blog.laoliu.eu.org/archives/757c72a1.html</id>
-    <published>2019-07-19T01:30:46.000Z</published>
-    <updated>2019-08-20T08:24:49.669Z</updated>
-    
-    <summary type="html">
-    
-      Lao_Liu组建一套黑群晖NAS的经验之谈。
-    
-    </summary>
     
     
       <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>

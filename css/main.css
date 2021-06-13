@@ -301,6 +301,9 @@ sup > a::before,
 }
 html {
   font-size: 16px;
+}
+html,
+body {
   font-family: var(--font-family-sans-serif);
 }
 html,
