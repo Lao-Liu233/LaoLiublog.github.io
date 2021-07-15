@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.laoliu.eu.org/"/>
-  <updated>2021-06-13T06:51:17.319Z</updated>
+  <updated>2021-07-15T01:51:59.938Z</updated>
   <id>https://blog.laoliu.eu.org/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2021 第二学期总结</title>
+    <link href="https://blog.laoliu.eu.org/archives/202ebc76.html"/>
+    <id>https://blog.laoliu.eu.org/archives/202ebc76.html</id>
+    <published>2021-07-15T01:00:00.000Z</published>
+    <updated>2021-07-15T01:51:59.938Z</updated>
+    
+    <summary type="html">
+    
+      对上一个学期简单的总结。
+    
+    </summary>
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+      <category term="随笔" scheme="https://blog.laoliu.eu.org/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Osprey Commet 简评</title>
     <link href="https://blog.laoliu.eu.org/archives/43a7a15c.html"/>
     <id>https://blog.laoliu.eu.org/archives/43a7a15c.html</id>
     <published>2021-06-13T07:00:00.000Z</published>
-    <updated>2021-06-13T06:51:17.319Z</updated>
+    <updated>2021-06-13T07:02:39.130Z</updated>
     
     <summary type="html">
     
@@ -386,26 +406,6 @@
     <summary type="html">
     
       如何从外网访问群晖服务器？最简单的方法-Zerotier。
-    
-    </summary>
-    
-      <category term="教程" scheme="https://blog.laoliu.eu.org/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程" scheme="https://blog.laoliu.eu.org/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>群晖-MC基岩版服务器教程</title>
-    <link href="https://blog.laoliu.eu.org/archives/2716e842.html"/>
-    <id>https://blog.laoliu.eu.org/archives/2716e842.html</id>
-    <published>2019-07-27T15:30:00.000Z</published>
-    <updated>2020-06-07T14:22:28.625Z</updated>
-    
-    <summary type="html">
-    
-      在群晖服务器上搭建Minecraft基岩版服务器。
     
     </summary>
     
